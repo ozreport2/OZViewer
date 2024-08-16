@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/OZAppletViewer.iml" filepath="$PROJECT_DIR$/OZAppletViewer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OZFlashToJSConverter.iml" filepath="$PROJECT_DIR$/OZFlashToJSConverter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OZJSViewer.iml" filepath="$PROJECT_DIR$/OZJSViewer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OZTSViewer.iml" filepath="$PROJECT_DIR$/OZTSViewer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewer.iml" filepath="$PROJECT_DIR$/viewer.iml" />
+    </modules>
+  </component>
+</project>

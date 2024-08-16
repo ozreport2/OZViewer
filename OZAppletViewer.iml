@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="jar://$OZSOURCE$/OZReportViewer/OZAppletViewer/build/activation.jar!/" />
+    <libelement value="jar://$OZSOURCE$/OZReportViewer/OZAppletViewer/build/mail.jar!/" />
+    <libelement value="jar://$OZSOURCE$/OZReportViewer/OZAppletViewer/build/jhall.jar!/" />
+    <libelement value="jar://$OZSOURCE$/OZReportViewer/OZAppletViewer/build/netscape.jar!/" />
+    <libelement value="jar://$OZSOURCE$/OZReportViewer/OZAppletViewer/build/uk.co.mmscomputing.imageio.tiff.jar!/" />
+    <varelement var="file://$OZSOURCE$/lib/java/dom4j-1.6.1.jar" value="OZ_LIB/java/dom4j-1.6.1.jar" />
+    <varelement var="file://$OZSOURCE$/lib/java/jaxen-1.1.6.jar" value="OZ_LIB/java/jaxen-1.1.6.jar" />
+    <varelement var="file://$OZSOURCE$/lib/java/log4j.jar" value="OZ_LIB/java/log4j.jar" />
+    <varelement var="file://$OZSOURCE$/lib/java/ozc_js.jar" value="OZ_LIB/java/ozc_js.jar" />
+    <varelement var="file://$OZSOURCE$/lib/java/ozsfw90.jar" value="OZ_LIB/java/ozsfw90.jar" />
+    <src_description expected_position="0">
+      <src_folder value="file://$OZSOURCE$/OZReportViewer/OZAppletViewer" expected_position="0" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$OZSOURCE$/OZReportViewer/OZAppletViewer">
+      <sourceFolder url="file://$OZSOURCE$/OZReportViewer/OZAppletViewer/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="activation.jar">
+        <CLASSES>
+          <root url="jar://$OZSOURCE$/OZReportViewer/OZAppletViewer/build/activation.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="mail.jar">
+        <CLASSES>
+          <root url="jar://$OZSOURCE$/OZReportViewer/OZAppletViewer/build/mail.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jhall.jar">
+        <CLASSES>
+          <root url="jar://$OZSOURCE$/OZReportViewer/OZAppletViewer/build/jhall.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="netscape.jar">
+        <CLASSES>
+          <root url="jar://$OZSOURCE$/OZReportViewer/OZAppletViewer/build/netscape.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="uk.co.mmscomputing.imageio.tiff.jar">
+        <CLASSES>
+          <root url="jar://$OZSOURCE$/OZReportViewer/OZAppletViewer/build/uk.co.mmscomputing.imageio.tiff.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$OZSOURCE$/lib/java/dom4j-1.6.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$OZSOURCE$/lib/java/jaxen-1.1.6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$OZSOURCE$/lib/java/log4j.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$OZSOURCE$/lib/java/ozc_js.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$OZSOURCE$/lib/java/ozsfw90.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$OZSOURCE$/lib/java/ozsfw90.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$OZSOURCE$/lib/java" />
+        </CLASSES>
+        <JAVADOC />
+        <NATIVE>
+          <root url="file://$OZSOURCE$/lib/java" />
+        </NATIVE>
+        <SOURCES>
+          <root url="file://$OZSOURCE$/lib/java" />
+        </SOURCES>
+        <jarDirectory url="file://$OZSOURCE$/lib/java" recursive="false" />
+        <jarDirectory url="file://$OZSOURCE$/lib/java" recursive="false" type="SOURCES" />
+      </library>
+    </orderEntry>
+  </component>
+</module>
