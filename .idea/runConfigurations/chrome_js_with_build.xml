@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="chrome_js_with_build" type="JavascriptDebugType" uri="http://localhost:63342/viewer80/OZJSViewer/bin/test.html" useBuiltInWebServerPort="true">
+    <method v="2">
+      <option name="Make" enabled="true" />
+      <option name="RunConfigurationTask" enabled="false" run_configuration_name="ASToJS" run_configuration_type="Application" />
+      <option name="RunConfigurationTask" enabled="false" run_configuration_name="copy_res" run_configuration_type="GroovyScriptRunConfiguration" />
+    </method>
+  </configuration>
+</component>
