@@ -2,8 +2,8 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$OZSOURCE$/OZReportViewer/OZJSViewer">
-      <sourceFolder url="file://$OZSOURCE$/OZReportViewer/OZJSViewer/src" isTestSource="false" />
+    <content url="file://$OZSOURCE90$/OZReportViewer/OZJSViewer">
+      <sourceFolder url="file://$OZSOURCE90$/OZReportViewer/OZJSViewer/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
