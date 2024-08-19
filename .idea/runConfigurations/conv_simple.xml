@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="conv-simple" type="js.build_tools.npm" nameIsGenerated="true">
+    <package-json value="$OZSOURCE$/OZReportViewer/OZTS/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="conv-simple" />
+    </scripts>
+    <node-interpreter value="project" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>

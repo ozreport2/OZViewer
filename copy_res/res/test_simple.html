@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+	<html style="height:100%">
+	<head>
+		<title>JSViewer Debug</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" type="text/css"/>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+		<!-- jquery Old 
+		<script src="https://code.jquery.com/jquery-1.8.3.min.js"></script>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" type="text/css"/>
+		<script src="https://code.jquery.com/ui/1.9.2/jquery-ui.min.js"></script>-->
+
+		<link rel="stylesheet" href="./ui.dynatree.css" type="text/css"/>
+		<script type="text/javascript" src="./jquery.dynatree.js" charset="utf-8"></script>
+
+		<script type="text/javascript" src="./_loadjs_simple.js" charset="utf-8"></script>
+		<!-- <script type="text/javascript" src="./DialogueFlow/_loadjs_df.js" charset="utf-8"></script> -->
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/1.7.225/pdf.js"></script>
+		<!-- <script type="text/javascript" src="./pdf_js/build/pdf-2.6.347.min.js"></script> -->
+		<!-- When using a PDF document or attaching a PDF file to a report, please set compatibility.js and pdf.js to be loaded.
+		<script type="text/javascript" src="./pdf_js/web/compatibility.js" charset="utf-8"></script>
+		<script type="text/javascript" src="./pdf_js/build/pdf.js" charset="utf-8"></script>
+		<script type="text/javascript">
+			if (typeof PDFJS != "undefined") {
+				//cMapUrl must match the path of pdf.js file. If it is different from the default path, be sure to correct it.
+				PDFJS.cMapUrl = "./pdf_js/web/cmaps/";
+				PDFJS.cMapPacked = true;
+			}
+		</script>-->
+
+		<!-- When using a HTML Label Editor, please set these summernote.js to be loaded.-->
+		<!-- <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/lang/summernote-ko-KR.min.js"></script>
+		<link rel="stylesheet" href="./HtmlEditor/summernote-ext-table.css" type="text/css"/>
+		<script type="text/javascript" src="./HtmlEditor/summernote-ext-table.js" charset="utf-8"></script> -->
+
+
+		<!-- When using a HTML Label Editor with global.language parameter(ja/jp, zh/cn, zh/tw), please set below js files to be loaded.
+		<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/lang/summernote-ja-JP.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/lang/summernote-zh-CN.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/lang/summernote-zh-TW.min.js"></script>-->
+	</head>
+	<body style="width:95vw;height:95vh">
+		<div id="OZViewer" style="width:98%;height:90%;overflow:hidden;"></div>
+		<div id="ozlog">Log</div>
+		<script type="text/javascript">
+			document.getElementById("ozlog").innerHTML += ("<br>"+navigator.userAgent);
+			var test = "";
+			if(typeof Uint8Array != "undefined"){
+				test += (" Uint8Array");
+			}
+			if(typeof DataView != "undefined"){
+				test += (" DataView");
+			}
+			if(typeof Blob != "undefined"){
+				test += (" Blob");
+			}
+			if(typeof BlobBuilder != "undefined"){
+				test += (" BlobBuilder");
+			}
+			if(typeof FileReader != "undefined"){
+				test += (" FileReader");
+			}
+			if(typeof FileWriter != "undefined"){
+				test += (" FileWriter");
+			}
+			if(typeof FileSaver != "undefined"){
+				test += (" FileSaver");
+			}
+			if(window.saveAs !== undefined){
+				test += (" window.saveAs");
+			}
+			if(test.length > 0){
+				document.getElementById("ozlog").innerHTML += "<br>"+test;
+			}
+
+			function getPosition(id) {
+				var elem = document.getElementById(id);
+				var offsetParent = elem.offsetParent,
+				doc = elem.ownerDocument,
+				docElem = doc.documentElement,
+				body = doc.body,
+				top = elem.offsetTop,
+				left = elem.offsetLeft;
+				if (typeof(window.pageXOffset) == 'number') {
+					top  -= window.pageYOffset;
+					left -= window.pageXOffset;
+				} else if (document.documentElement && (document.documentElement.scrollLeft  || document.documentElement.scrollTop)) {
+					top  -= document.documentElement.scrollTop;
+					left -= document.documentElement.scrollLeft;
+				} else if (document.body && (document.body.scrollLeft || document.body.scrollTop)) {
+					top  -= document.body.scrollTop;
+					left -= document.body.scrollLeft;
+				}
+				while ((elem = elem.parentNode) && elem !== body && elem !== docElem) {
+					top  -= elem.scrollTop;
+					left -= elem.scrollLeft;
+					if (elem === offsetParent) {
+						top  += elem.offsetTop;
+						left += elem.offsetLeft;
+						offsetParent = elem.offsetParent;
+					}
+				}
+
+				var myWidth = 0, myHeight = 0;
+				if(typeof(window.innerWidth) == 'number') {
+					myWidth = window.innerWidth;
+					myHeight = window.innerHeight;
+				} else if (document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight )) {
+					myWidth = document.documentElement.clientWidth;
+					myHeight = document.documentElement.clientHeight;
+				} else if (document.body && ( document.body.clientWidth || document.body.clientHeight )) {
+					myWidth = document.body.clientWidth;
+					myHeight = document.body.clientHeight;
+				}
+				return left+","+top+","+myWidth+","+myHeight;  
+			}
+		</script>
+	</body>
+</html>

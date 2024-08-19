@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="applet_viewer_frame" type="Application" factoryName="Application" folderName="applet">
+    <option name="ALTERNATIVE_JRE_PATH" value="BUNDLED" />
+    <option name="MAIN_CLASS_NAME" value="oz.main.OZReportFrame" />
+    <module name="OZAppletViewer" />
+    <option name="PROGRAM_PARAMETERS" value="/file ./param/param_frame.oz" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
