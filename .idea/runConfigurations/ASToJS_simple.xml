@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ASToJS_simple" type="Application" factoryName="Application" folderName="converter">
+    <option name="MAIN_CLASS_NAME" value="oz.build.OZAStoJSConverter_simple" />
+    <module name="OZFlashToJSConverter" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

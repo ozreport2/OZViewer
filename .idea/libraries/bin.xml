@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="bin">
+    <CLASSES>
+      <root url="jar://$OZSOURCE80$/OZReportViewer/OZFlash/OZFlash/bin/xpath-as3-1.0.1.swc!/" />
+      <root url="jar://$OZSOURCE80$/OZReportViewer/OZFlash/OZFlash/bin/WindowsClassic.swc!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

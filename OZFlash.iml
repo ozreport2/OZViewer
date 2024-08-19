@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="OZFlash">
+    <configurations>
+      <configuration name="OZFlash" target-platform="Desktop" main-class="OZCMainFrameFlash" output-file="flash.swf" output-folder="$MODULE_DIR$/out">
+        <dependencies>
+          <entries>
+            <entry library-id="636bef3f-208d-49d6-993b-06a50891a859">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-id="1672d166-faff-4731-8775-2561265ca6f3">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="3.2.0" />
+        </dependencies>
+        <compiler-options />
+        <packaging-air-desktop package-file-name="OZFlash" />
+        <packaging-android />
+        <packaging-ios />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$OZSOURCE80$/OZReportViewer/OZFlash">
+      <sourceFolder url="file://$OZSOURCE80$/OZReportViewer/OZFlash/OZFlash" isTestSource="false" />
+      <excludeFolder url="file://$OZSOURCE80$/OZReportViewer/OZFlash/OZFlash/bin" />
+      <excludeFolder url="file://$OZSOURCE80$/OZReportViewer/OZFlash/OZFlash/build" />
+    </content>
+    <orderEntry type="jdk" jdkName="3.2.0" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="bin" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="636bef3f-208d-49d6-993b-06a50891a859" />
+        <CLASSES>
+          <root url="jar://$OZSOURCE80$/OZReportViewer/OZFlash/OZFlash/bin/WindowsClassic.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library type="flex">
+        <properties id="1672d166-faff-4731-8775-2561265ca6f3" />
+        <CLASSES>
+          <root url="jar://$OZSOURCE80$/OZReportViewer/OZFlash/OZFlash/bin/xpath-as3-1.0.1.swc!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

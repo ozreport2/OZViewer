@@ -3,7 +3,7 @@
     <CLASSES />
     <JAVADOC />
     <NATIVE>
-      <root url="file://$OZSOURCE$/lib/java" />
+      <root url="file://$OZSOURCE80$/lib/java" />
     </NATIVE>
     <SOURCES />
   </library>
