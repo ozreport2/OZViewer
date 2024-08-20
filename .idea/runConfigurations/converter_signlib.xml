@@ -3,7 +3,6 @@
     <option name="ALTERNATIVE_JRE_PATH" value="BUNDLED" />
     <option name="MAIN_CLASS_NAME" value="oz.build.OZJSBuilder_signlib" />
     <module name="OZFlashToJSConverter" />
-    <option name="PROGRAM_PARAMETERS" value="$OZSOURCE80$" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>
