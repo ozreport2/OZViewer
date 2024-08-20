@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="chrome_js" type="JavascriptDebugType" uri="http://localhost:63342/viewer80/OZJSViewer/bin/test.html" useBuiltInWebServerPort="true">
+  <configuration default="false" name="chrome_js" type="JavascriptDebugType" folderName="debug" uri="http://localhost:63342/viewer/OZJSViewer/bin/test.html" useBuiltInWebServerPort="true">
     <method v="2">
       <option name="RunConfigurationTask" enabled="true" run_configuration_name="copy_res" run_configuration_type="GroovyScriptRunConfiguration" />
     </method>

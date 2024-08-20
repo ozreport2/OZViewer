@@ -3,7 +3,7 @@
     <option name="ALTERNATIVE_JRE_PATH" value="BUNDLED" />
     <option name="MAIN_CLASS_NAME" value="oz.build.OZJSObfuscator_External" />
     <module name="OZFlashToJSConverter" />
-    <option name="PROGRAM_PARAMETERS" value="DialogueFlow $OZSOURCE80$/OZReportViewer/OZJSViewer/DialogueFlow/src/ $OZSOURCE80$/OZReportViewer/OZJSViewer/bin/DialogueFlow/DialogueFlow.js" />
+    <option name="PROGRAM_PARAMETERS" value="DialogueFlow $OZSOURCE$/OZReportViewer/OZJSViewer/DialogueFlow/src/ $OZSOURCE$/OZReportViewer/OZJSViewer/DialogueFlow/packager/obfuscated $OZSOURCE$/OZReportViewer/OZJSViewer/DialogueFlow/packager/release" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>
