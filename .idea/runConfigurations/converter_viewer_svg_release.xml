@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="converter_viewer_svg_release" type="Application" factoryName="Application" folderName="converter">
+    <option name="ALTERNATIVE_JRE_PATH" value="BUNDLED" />
+    <option name="MAIN_CLASS_NAME" value="oz.build.OZJSObfuscator_simple" />
+    <module name="OZFlashToJSConverter" />
+    <option name="PROGRAM_PARAMETERS" value="$OZSOURCE$" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
