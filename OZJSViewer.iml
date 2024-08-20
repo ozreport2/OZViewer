@@ -4,6 +4,13 @@
     <exclude-output />
     <content url="file://$OZSOURCE$/OZReportViewer/OZJSViewer">
       <sourceFolder url="file://$OZSOURCE$/OZReportViewer/OZJSViewer/src" isTestSource="false" />
+      <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZJSViewer/DialogueFlow/packager" />
+      <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZJSViewer/OZVideoSign/obfuscated" />
+      <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZJSViewer/OZVideoSign/release" />
+      <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZJSViewer/bin" />
+      <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZJSViewer/gen" />
+      <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZJSViewer/gen_simple" />
+      <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZJSViewer/obfuscated" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
