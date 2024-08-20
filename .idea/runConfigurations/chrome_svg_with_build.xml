@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="chrome_svg_with_build" type="JavascriptDebugType" uri="http://localhost:63342/viewer90/OZJSViewer/bin/test_simple.html" useBuiltInWebServerPort="true">
+  <configuration default="false" name="chrome_svg_with_build" type="JavascriptDebugType" folderName="debug" uri="http://localhost:63342/viewer/OZJSViewer/bin/test_simple.html" useBuiltInWebServerPort="true">
     <method v="2">
       <option name="RunConfigurationTask" enabled="true" run_configuration_name="conv-simple" run_configuration_type="js.build_tools.npm" />
       <option name="RunConfigurationTask" enabled="false" run_configuration_name="copy_res" run_configuration_type="GroovyScriptRunConfiguration" />
