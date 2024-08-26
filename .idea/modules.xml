@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/OZJSViewer.iml" filepath="$PROJECT_DIR$/OZJSViewer.iml" />
       <module fileurl="file://$PROJECT_DIR$/OZTSViewer.iml" filepath="$PROJECT_DIR$/OZTSViewer.iml" />
       <module fileurl="file://$PROJECT_DIR$/copy_res/copy_res.iml" filepath="$PROJECT_DIR$/copy_res/copy_res.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ozviewer_html5.iml" filepath="$PROJECT_DIR$/ozviewer_html5.iml" />
       <module fileurl="file://$PROJECT_DIR$/viewer.iml" filepath="$PROJECT_DIR$/viewer.iml" />
     </modules>
   </component>
