@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="conv-simple" type="js.build_tools.npm" nameIsGenerated="true">
+  <configuration default="false" name="conv-simple" type="js.build_tools.npm" folderName="ts_to_js" nameIsGenerated="true">
     <package-json value="$OZSOURCE$/OZReportViewer/OZTS/package.json" />
     <command value="run" />
     <scripts>
