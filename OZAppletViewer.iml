@@ -19,6 +19,7 @@
     <exclude-output />
     <content url="file://$OZSOURCE80$/OZReportViewer/OZAppletViewer">
       <sourceFolder url="file://$OZSOURCE80$/OZReportViewer/OZAppletViewer/src" isTestSource="false" />
+      <excludeFolder url="file://$OZSOURCE80$/OZReportViewer/OZAppletViewer/bin" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
