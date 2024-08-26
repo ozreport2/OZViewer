@@ -5,6 +5,9 @@
     <content url="file://$OZSOURCE$/OZReportViewer/OZFlashToJSConverter">
       <sourceFolder url="file://$OZSOURCE$/OZReportViewer/OZFlashToJSConverter/src" isTestSource="false" />
       <sourceFolder url="file://$OZSOURCE$/OZReportViewer/OZFlashToJSConverter/src_lib" isTestSource="false" />
+      <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZFlashToJSConverter/bin" />
+      <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZFlashToJSConverter/help" />
+      <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZFlashToJSConverter/help_svg" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
