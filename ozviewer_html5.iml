@@ -2,9 +2,9 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$OZSOURCE$/packager/ozviewer_html5">
-      <excludeFolder url="file://$OZSOURCE$/packager/ozviewer_html5/ant_1.7.0.v200803061910" />
-      <excludeFolder url="file://$OZSOURCE$/packager/ozviewer_html5/release" />
+    <content url="file://$OZSOURCE90$/packager/ozviewer_html5">
+      <excludeFolder url="file://$OZSOURCE90$/packager/ozviewer_html5/ant_1.7.0.v200803061910" />
+      <excludeFolder url="file://$OZSOURCE90$/packager/ozviewer_html5/release" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

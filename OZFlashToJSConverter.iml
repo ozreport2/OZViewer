@@ -2,12 +2,12 @@
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$OZSOURCE$/OZReportViewer/OZFlashToJSConverter">
-      <sourceFolder url="file://$OZSOURCE$/OZReportViewer/OZFlashToJSConverter/src" isTestSource="false" />
-      <sourceFolder url="file://$OZSOURCE$/OZReportViewer/OZFlashToJSConverter/src_lib" isTestSource="false" />
-      <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZFlashToJSConverter/bin" />
-      <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZFlashToJSConverter/help" />
-      <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZFlashToJSConverter/help_svg" />
+    <content url="file://$OZSOURCE90$/OZReportViewer/OZFlashToJSConverter">
+      <sourceFolder url="file://$OZSOURCE90$/OZReportViewer/OZFlashToJSConverter/src" isTestSource="false" />
+      <sourceFolder url="file://$OZSOURCE90$/OZReportViewer/OZFlashToJSConverter/src_lib" isTestSource="false" />
+      <excludeFolder url="file://$OZSOURCE90$/OZReportViewer/OZFlashToJSConverter/bin" />
+      <excludeFolder url="file://$OZSOURCE90$/OZReportViewer/OZFlashToJSConverter/help" />
+      <excludeFolder url="file://$OZSOURCE90$/OZReportViewer/OZFlashToJSConverter/help_svg" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
