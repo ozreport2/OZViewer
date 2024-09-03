@@ -5,6 +5,9 @@
     <content url="file://$OZSOURCE90$/OZReportViewer/OZTS">
       <sourceFolder url="file://$OZSOURCE90$/OZReportViewer/OZTS/OZTSViewer/src" isTestSource="false" />
       <sourceFolder url="file://$OZSOURCE90$/OZReportViewer/OZTS/OZTSViewer/gen" isTestSource="false" />
+      <sourceFolder url="file://$OZSOURCE90$/OZReportViewer/OZTS/OZTSViewer/tmp" isTestSource="false" />
+      <sourceFolder url="file://$OZSOURCE90$/OZReportViewer/OZTS/OZTSViewer/src_canvas" isTestSource="false" />
+      <sourceFolder url="file://$OZSOURCE90$/OZReportViewer/OZTS/OZTSViewer/src_svg" isTestSource="false" />
       <excludeFolder url="file://$OZSOURCE90$/OZReportViewer/OZTS/OZTStoJSConverter/dist" />
     </content>
     <orderEntry type="inheritedJdk" />
