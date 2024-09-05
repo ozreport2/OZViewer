@@ -5,6 +5,7 @@
     <scripts>
       <script value="conv" />
     </scripts>
+    <arguments value="-- --workers=6" />
     <node-interpreter value="project" />
     <envs />
     <method v="2" />
