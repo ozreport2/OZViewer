@@ -39,11 +39,11 @@
 		String strPath = s_ROOT_PATH + strValue;
 		ArrayList<String> strList = new ArrayList<String>();
 		File file = new File(strPath);
-        try {
-            System.err.println(file.getCanonicalPath());
-            } catch (IOException e) {
-            e.printStackTrace();
-            }
+        // try {
+        //     System.err.println(file.getCanonicalPath());
+		// } catch (IOException e) {
+		// 	e.printStackTrace();
+		// }
 		if (file != null) {
 			File[] fileList = file.listFiles();
 			if (fileList != null) {
@@ -144,7 +144,7 @@
 		String strPath = new File(request.getRealPath("") + "../../").getCanonicalPath() + "/";
 		s_ROOT_PATH = strPath.replaceAll("\\\\", "/");
 	}
-    System.out.println("JSP 실제 파일 경로: " + s_ROOT_PATH);
+    // System.out.println("JSP 실제 파일 경로: " + s_ROOT_PATH);
 	String strDirectory = GetParamValue(request.getParameter("directories"));
 	String strSep = GetParamValue(request.getParameter("sep"));
 	String strScenarioID = GetParamValue(request.getParameter("scenario_id"));
@@ -168,7 +168,7 @@
 		strDirectory = "param";
 	}
 
-    System.err.println("strDirectory : " + strDirectory);
+    // System.err.println("strDirectory : " + strDirectory);
 
 	if(!skip) {
         if (!IsEmpty(strParamViewerVersion)) {
