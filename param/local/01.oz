@@ -1,0 +1,2 @@
+connection.servlet=DEFAULT_OZSERVLET
+connection.reportname=ozr_Old/FreezePane_TopBottom.ozr
