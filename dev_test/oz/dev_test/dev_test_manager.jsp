@@ -141,7 +141,7 @@
 %>
 <%
 	if (IsEmpty(s_ROOT_PATH)) {
-		String strPath = new File(request.getRealPath("") + "../../").getCanonicalPath() + "/";
+		String strPath = new File(request.getRealPath("") + "../../../").getCanonicalPath() + "/";
 		s_ROOT_PATH = strPath.replaceAll("\\\\", "/");
 	}
     // System.out.println("JSP 실제 파일 경로: " + s_ROOT_PATH);
