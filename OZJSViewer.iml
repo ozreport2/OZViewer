@@ -11,6 +11,7 @@
       <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZJSViewer/gen" />
       <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZJSViewer/gen_simple" />
       <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZJSViewer/obfuscated" />
+      <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZJSViewer/webpack/dist" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

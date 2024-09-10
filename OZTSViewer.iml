@@ -9,6 +9,7 @@
       <sourceFolder url="file://$OZSOURCE$/OZReportViewer/OZTS/OZTSViewer/src_canvas" isTestSource="false" />
       <sourceFolder url="file://$OZSOURCE$/OZReportViewer/OZTS/OZTSViewer/src_svg" isTestSource="false" />
       <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZTS/OZTStoJSConverter/dist" />
+      <excludeFolder url="file://$OZSOURCE$/OZReportViewer/OZTS/node_modules" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
