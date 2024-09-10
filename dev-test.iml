@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$OZSOURCE90$/misc/dev-test">
+      <excludeFolder url="file://$OZSOURCE90$/misc/dev-test/dist" />
+      <excludeFolder url="file://$OZSOURCE90$/misc/dev-test/env" />
+      <excludeFolder url="file://$OZSOURCE90$/misc/dev-test/node_modules" />
+      <excludeFolder url="file://$OZSOURCE90$/misc/dev-test/public" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

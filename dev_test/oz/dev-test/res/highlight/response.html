@@ -1,0 +1,50 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=10" />
+<link rel="stylesheet" href="vs2015.css">
+<script>
+if (!Array.prototype.forEach) {
+    Array.prototype.forEach = function(fn, scope) {
+        for(var i = 0, len = this.length; i < len; ++i) {
+            fn.call(scope, this[i], i, this);
+        }
+    }
+}
+</script>
+<script src="highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<pre><code class="gherkin">
+# 입력 컴포넌트가 있는 보고서에서 틀 고정 동작 확인
+
+
+Feature: 보고서 틀 고정 기본 동작 확인 - 입력 컴포넌트 있음
+
+
+ &nbsp; &nbsp;Background:
+ &nbsp; &nbsp; &nbsp; &nbsp;Given 필수파일 및 뷰어패러미터 설정
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 보고서파일 &nbsp; | ozr/FreezePane_TopBottom.ozr, ozr/FreezePane_Top.ozr &nbsp; |
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 뷰어패러미터1 &nbsp; | 보고서실행 &nbsp; |
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 뷰어패러미터2 &nbsp; | viewer.pagedisplay=continuous &nbsp; |
+
+
+ &nbsp; &nbsp;Scenario Outline: 1.
+ &nbsp; &nbsp; &nbsp; &nbsp;Given 뷰어패러미터1 실행
+ &nbsp; &nbsp; &nbsp; &nbsp;And 세로방향 스크롤이 표시된 상태
+ &nbsp; &nbsp; &nbsp; &nbsp;When &lt;PageNo&gt;로 이동
+ &nbsp; &nbsp; &nbsp; &nbsp;And 스크롤을 위/아래 끝까지 최소 4번 이동
+ &nbsp; &nbsp; &nbsp; &nbsp;Then 페이지에 있는 빨간색 점선이 가져지지 않고 고정되어 표시됨 # 빨간색 점선 위치는 보고서 화면에서 확인
+ &nbsp; &nbsp; &nbsp; &nbsp;Examples:
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| PageNo &nbsp; |
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 1 &nbsp; |
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 2 &nbsp; |
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 3 &nbsp; |
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;| 4 &nbsp; |
+
+
+ &nbsp; &nbsp;Scenario: 2.
+ &nbsp; &nbsp; &nbsp; &nbsp;Given 뷰어패러미터2 실행
+ &nbsp; &nbsp; &nbsp; &nbsp;When 스크롤을 위/아래 끝까지 최소 4번 이동
+ &nbsp; &nbsp; &nbsp; &nbsp;Then 페이지에 있는 빨간색 점선이 가져지지 않고 고정되어 표시됨 # 빨간색 점선 위치는 보고서 화면에서 확인
+
+
+<br><br>
+</code></pre>
