@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="webpack_canvas" type="js.build_tools.npm" folderName="webpack">
+    <package-json value="$OZSOURCE$/OZReportViewer/OZJSViewer/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="build_canvas" />
+    </scripts>
+    <arguments value="-- --env output=$PROJECT_DIR$/dev_test/viewer" />
+    <node-interpreter value="project" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>

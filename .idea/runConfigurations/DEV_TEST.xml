@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="DEV_TEST" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.93" ALTERNATIVE_JRE_ENABLED="false" show_console_on_std_err="true" show_console_on_std_out="true">
-    <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8090/oz/dev-test" />
+    <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8090/oz/dev-test?&amp;left=0&amp;theme=dark" />
     <option name="START_JAVASCRIPT_DEBUGGER" value="true" />
     <option name="UPDATING_POLICY" value="restart-server" />
     <deployment>
