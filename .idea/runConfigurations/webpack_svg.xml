@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="webpack_svg" type="js.build_tools.npm" folderName="webpack">
-    <package-json value="$OZSOURCE$/OZReportViewer/OZJSViewer/package.json" />
+    <package-json value="$OZSOURCE90$/OZReportViewer/OZJSViewer/package.json" />
     <command value="run" />
     <scripts>
       <script value="build_svg" />

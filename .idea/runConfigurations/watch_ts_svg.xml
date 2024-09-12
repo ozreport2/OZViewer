@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="watch_ts_svg" type="js.build_tools.npm">
-    <package-json value="$OZSOURCE$/OZReportViewer/OZTS/package.json" />
+    <package-json value="$OZSOURCE90$/OZReportViewer/OZTS/package.json" />
     <command value="run" />
     <scripts>
       <script value="watch-simple" />
@@ -9,7 +9,7 @@
     <envs />
     <method v="2">
       <option name="NpmBeforeRunTask" enabled="true">
-        <package-json value="$OZSOURCE$/OZReportViewer/OZTS/package.json" />
+        <package-json value="$OZSOURCE90$/OZReportViewer/OZTS/package.json" />
         <command value="install" />
         <node-interpreter value="project" />
         <envs />
