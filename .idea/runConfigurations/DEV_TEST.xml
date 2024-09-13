@@ -1,7 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="DEV_TEST" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.93" ALTERNATIVE_JRE_ENABLED="false" show_console_on_std_err="true" show_console_on_std_out="true">
-    <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8090/oz/dev-test?&amp;left=0&amp;theme=dark" />
-    <option name="START_JAVASCRIPT_DEBUGGER" value="true" />
+    <option name="OPEN_IN_BROWSER_URL" value="https://localhost:8091/oz/dev-test?&amp;left=0&amp;theme=dark" />
     <option name="UPDATING_POLICY" value="restart-server" />
     <deployment>
       <file path="$PROJECT_DIR$/dev_test/viewer">
@@ -38,6 +37,7 @@
     <server-settings>
       <option name="BASE_DIRECTORY_NAME" value="ee0a3221-d74e-4241-bb44-0e6747e16cc3" />
       <option name="HTTP_PORT" value="8090" />
+      <option name="HTTPS_PORT" value="8091" />
     </server-settings>
     <predefined_log_file enabled="true" id="Tomcat" />
     <predefined_log_file enabled="true" id="Tomcat Catalina" />
