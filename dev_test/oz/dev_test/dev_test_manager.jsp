@@ -166,6 +166,8 @@
 		skip = true;
 	} else if("user".equals(strDirectory)) {
 		strDirectory = "param";
+	} else if("viewers".equals(strDirectory)) {
+        strDirectory = "dev_test/viewers";
 	}
 
     // System.err.println("strDirectory : " + strDirectory);
