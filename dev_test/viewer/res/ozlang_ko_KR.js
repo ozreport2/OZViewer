@@ -736,6 +736,7 @@ with (__oznamespace__) {
 	__oz_lang__["IDS_ATTACHMENTS_DELETE"] = "삭제";
 	__oz_lang__["IDS_ATTACHMENTS_EMPTY"] = "여기에 파일을 드래그하세요.\n또는";
 	__oz_lang__["IDS_ATTACHMENTS_MAXSIZE"] = "최대 사이즈";
+	__oz_lang__["IDS_ATTACHMENTS_IMAGE_INDIVIDUALLY"] = "개별 첨부";
 	__oz_lang__["IDS_ATTACHERROR_UNSUPPORTED"] = "지원하지 않는 파일 형식";
 	__oz_lang__["IDS_ATTACHERROR_OVERSIZE"] = "사이즈 초과";
 	__oz_lang__["IDS_ATTACHERROR_OPENFAIL"] = "파일 열기 실패";

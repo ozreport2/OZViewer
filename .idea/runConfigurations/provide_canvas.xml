@@ -25,6 +25,7 @@
         <envs />
       </option>
       <option name="RunConfigurationTask" enabled="false" run_configuration_name="conv" run_configuration_type="js.build_tools.npm" />
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="copy_devTestRes" run_configuration_type="GroovyScriptRunConfiguration" />
     </method>
   </configuration>
 </component>

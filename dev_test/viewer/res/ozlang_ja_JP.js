@@ -735,6 +735,7 @@ with (__oznamespace__) {
 	__oz_lang__["IDS_ATTACHMENTS_DELETE"] = "削除";
 	__oz_lang__["IDS_ATTACHMENTS_EMPTY"] = "ここにファイルをドラッグ&ドロップ\n或は\n\"追加\"追加ボタンをクリック";
 	__oz_lang__["IDS_ATTACHMENTS_MAXSIZE"] = "最大サイズ(nMB)";
+	__oz_lang__["IDS_ATTACHMENTS_IMAGE_INDIVIDUALLY"] = "個別に添付";
 	__oz_lang__["IDS_ATTACHERROR_UNSUPPORTED"] = "サポートされていないファイル形式";
 	__oz_lang__["IDS_ATTACHERROR_OVERSIZE"] = "ファイルサイズ超過";
 	__oz_lang__["IDS_ATTACHERROR_OPENFAIL"] = "読み取り失敗";
