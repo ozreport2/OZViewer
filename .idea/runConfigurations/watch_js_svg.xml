@@ -18,6 +18,7 @@
         <envs />
       </option>
       <option name="RunConfigurationTask" enabled="true" run_configuration_name="conv-simple" run_configuration_type="js.build_tools.npm" />
+      <option name="RunConfigurationTask" enabled="true" run_configuration_name="copy_devTestRes" run_configuration_type="GroovyScriptRunConfiguration" />
       <option name="LaunchBrowser.Before.Run" url="http://localhost:8090/oz/dev-test/?viewer=6&amp;left=0&amp;theme=dark" withDebugger="true" />
     </method>
   </configuration>

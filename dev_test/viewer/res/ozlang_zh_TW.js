@@ -726,6 +726,7 @@ with (__oznamespace__) {
 	__oz_lang__["IDS_ATTACHMENTS_DELETE"] = "Delete";
 	__oz_lang__["IDS_ATTACHMENTS_EMPTY"] = "Drag and drop a file here\nOR\nClick \"Add\" button.";
 	__oz_lang__["IDS_ATTACHMENTS_MAXSIZE"] = "Max size is n MB";
+	__oz_lang__["IDS_ATTACHMENTS_IMAGE_INDIVIDUALLY"] = "Attach individually";
 	__oz_lang__["IDS_ATTACHERROR_UNSUPPORTED"] = "Unsupported file format";
 	__oz_lang__["IDS_ATTACHERROR_OVERSIZE"] = "Max size exceeded";
 	__oz_lang__["IDS_ATTACHERROR_INVALID_PDF"] = "Unknown PDF file";
