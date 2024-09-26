@@ -38,6 +38,11 @@
           <option name="CONTEXT_PATH" value="/oz/viewers" />
         </settings>
       </file>
+      <file path="$PROJECT_DIR$/param">
+        <settings>
+          <option name="CONTEXT_PATH" value="/oz/user" />
+        </settings>
+      </file>
     </deployment>
     <server-settings>
       <option name="BASE_DIRECTORY_NAME" value="ee0a3221-d74e-4241-bb44-0e6747e16cc3" />
