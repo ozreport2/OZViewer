@@ -35,17 +35,36 @@ static void copyTestRes(String ozsourcePath) {
 static void copyDevTestRes(String ozsourcePath) {
   println("<--- MODE : Copy dev-test resources")
 
+  File image_pc = new File(ozsourcePath + "/OZReportViewer/OZJSViewer/bin/OZJSViewer_ozimg_pc.js");
+  File image_m = new File(ozsourcePath + "/OZReportViewer/OZJSViewer/bin/OZJSViewer_ozimg_m.js");
+
+  File[] root = new File[] {
+  image_pc, image_m
+  };
+
+  copyFiles(root, new File("../dev_test/viewer"));
+
   File srcDir = new File(ozsourcePath + "/OZReportViewer/OZJSViewer/bin/res")
   File destDir = new File("../dev_test/viewer/res")
   println "src : ${srcDir.getAbsolutePath()}"
   println "dest : ${destDir.getAbsolutePath()}"
   srcDir.listFiles().each { f ->
     if (f.name.endsWith(".js")) {
-      File dest = new File(destDir, f.name)
-      println "copy : ${f.absolutePath} ==> ${dest.absolutePath}"
-      Files.copy(f.toPath(), dest.toPath(), StandardCopyOption.REPLACE_EXISTING)
+      copyFile(f, destDir);
     }
   }
+}
+
+static void copyFiles(File[] list, File destDir) {
+  list.each {
+    copyFile(it, destDir);
+  }
+}
+
+static void copyFile(File f, File destDir) {
+  File dest = new File(destDir, f.name)
+  println "copy : ${f.absolutePath} ==> ${dest.absolutePath}"
+  Files.copy(f.toPath(), dest.toPath(), StandardCopyOption.REPLACE_EXISTING)
 }
 
 static void main(String[] args) {
