@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+		<link rel="stylesheet" href="../dev_test/oz/jquery/jquery-ui.css" type="text/css"/>
+		<script src="../dev_test/oz/jquery/jquery-2.0.3.min.js"></script>
+		<script src="../dev_test/oz/jquery/jquery-ui.min.js"></script>
+		
+		<link rel="stylesheet" href="../dev_test/viewer/ui.dynatree.css" type="text/css"/>
+		<script type="text/javascript" src="../dev_test/viewer/jquery.dynatree.js" charset="utf-8"></script>
+		<script type="text/javascript" src="../dev_test/viewer/OZJSViewer.js" charset="utf-8"></script>
+		<script type="text/javascript" src="../dev_test/viewer/pdf_js/web/compatibility.js"></script>  
+		<script type="text/javascript" src="../dev_test/viewer/pdf_js/build/pdf.js"></script>
+		
+		<style>
+			html {
+				padding: 0;
+				margin: 0;
+			}
+		
+			body {
+				margin: 0;
+				padding: 0;
+				width: 100vw;
+				height: 100vh;
+				background-color: gray;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				align-items: flex-start;
+			}
+			
+			.container {
+				margin: 10px;
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: center;
+			}
+			.expanded {
+				flex: 1 1 auto;
+			}
+			#OZViewer {
+				width: 95%;
+				height: 95%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<button onclick="startViewer();">Start Viewer</button>
+			<button onclick="startExport();">Start Export</button>
+		</div>
+		<div class="container expanded">
+			<div id="OZViewer"></div>
+		</div>
+		<script type="text/javascript" >
+			function SetOZParamters_OZViewer(){
+				var oz;
+				oz = document.getElementById("OZViewer");
+
+				var token = chrome.webview.hostObjects.sync.bridge.getToken();
+				var param = chrome.webview.hostObjects.sync.bridge.getParam();
+				var params = param.split(token);
+				if(params != null && params.length > 0){
+				  var nFind;
+					for(var i = 0; i< params.length; i++){
+						nFind = params[i].indexOf("=");
+						if(nFind > 0){
+							oz.sendToActionScript(params[i].substr(0,nFind),params[i].substr(nFind+1));
+						}
+					}
+				}
+				return true;
+				
+			}
+			
+			function getOZResource_local(url){
+				if(chrome.webview.hostObjects.sync.bridge == null) return "@error@";
+				console.log("getOZResource_local : " + url);
+				return  chrome.webview.hostObjects.sync.bridge.getOZResource_local(url);
+				//if(url.indexOf("file") == 0){
+				//	return  chrome.webview.hostObjects.sync.bridge.getOZResource_local(url);
+				//}else{
+				//	return  chrome.webview.hostObjects.sync.bridge.getOZResource_local("D:/html5/"+url);
+				//}
+			}
+			
+			function startExport() {
+				OZViewer.ScriptEx("save_memorystream", "viewer.mode=export;export.confirmsave=false;export.mode=silent", ";");
+			}
+			
+			function OZProgressCommand_OZViewer(step, state, reportname) {
+				console.log("OZProgressCommand", {
+					step, state, reportname
+				});
+				if (step == 4 && state == 2) {
+					setTimeout(startExport, 100);
+				}
+			}
+			
+			
+			function OZExportMemoryStreamCallBack_OZViewer(outputdata) {
+				console.log("OZExportMemoryStreamCallBack", JSON.parse(outputdata));
+				// console.log("OZExportMemoryStreamCallBack");
+				try{
+					outputdata = eval('(' + outputdata + ')');
+					for(var name in outputdata){				
+						chrome.webview.hostObjects.sync.bridge.saveExport(name, outputdata[name]);
+						//alert(name + ":" + outputdata[name]);
+						bCheck = true;
+					}
+					if (bCheck && confirm("close window?")) {
+						chrome.webview.hostObjects.sync.bridge.saveExportEnd();
+					}
+				}catch(e){
+				}
+			}
+			function OZErrorCommand_OZViewer(code, message, detailmessage, reportname) {
+				console.log("OZErrorCommand", {
+					code, message, detailmessage, reportname
+				});
+				debugger;
+				// chrome.webview.hostObjects.sync.bridge.errorCommand(code, message, detailmessage, reportname);
+			}
+
+			function RunOZViewer() {
+				// startViewer();
+			}
+			
+			function startViewer() {
+				var opt = [];
+				opt["use_act_mode"] = true;
+				start_ozjs("OZViewer","file://"+chrome.webview.hostObjects.sync.bridge.getMyPath()+"../dev_test/viewer/", opt);
+			}
+		</script>
+	</body>
+</html>
+

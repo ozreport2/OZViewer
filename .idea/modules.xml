@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ACT/ACT.iml" filepath="$PROJECT_DIR$/ACT/ACT.iml" />
       <module fileurl="file://$PROJECT_DIR$/OZAppletViewer.iml" filepath="$PROJECT_DIR$/OZAppletViewer.iml" />
       <module fileurl="file://$PROJECT_DIR$/OZFlashToJSConverter.iml" filepath="$PROJECT_DIR$/OZFlashToJSConverter.iml" />
       <module fileurl="file://$PROJECT_DIR$/OZJSViewer.iml" filepath="$PROJECT_DIR$/OZJSViewer.iml" />
