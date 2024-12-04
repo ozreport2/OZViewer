@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "../OZSOURCE90/OZReportViewer/OZActiveX"
+		},
+		{
+			"path": "param"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"**/OZCRESOURCEKOREAN/Viewer.rc": "text-euckr",
+			"**/OZCRESOURCEJAPANESE/Viewer.rc": "text-shiftjis"
+		},
+		"[cpp]": {
+			"files.encoding": "euckr"
+		},
+		"[text-euckr]": {
+			"files.encoding": "euckr"
+		},
+		"[text-shiftjis]": {
+			"files.encoding": "shiftjis"
+		}
+	},
+	"extensions": {
+		"recommendations": [
+		]
+	}
+}
