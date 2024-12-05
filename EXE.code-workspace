@@ -24,6 +24,7 @@
 	},
 	"extensions": {
 		"recommendations": [
+			"ms-vscode.cpptools"
 		]
 	}
 }
