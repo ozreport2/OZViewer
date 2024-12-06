@@ -1,0 +1,117 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "TStoJS_Install",
+			"type": "shell",
+			"command": "cd ${workspaceFolder:OZTS}; npm install",
+			"group": {
+				"kind": "build",
+			}
+		}, {
+			"label": "TStoJS_Conv",
+			"type": "shell",
+			"dependsOn": ["TStoJS_Install"],
+			"command": "cd ${workspaceFolder:OZTS}; npm run conv",
+			"group": {
+				"kind": "build",
+			}
+		}, {
+			"label": "TStoJS_Conv_simple",
+			"type": "shell",
+			"dependsOn": ["TStoJS_Install"],
+			"command": "cd ${workspaceFolder:OZTS}; npm run conv-simple",
+			"group": {
+				"kind": "build",
+			}
+		}, {
+			"label": "TStoJS_Watch",
+			"type": "shell",
+			"dependsOn": ["TStoJS_Install"],
+			"command": "cd ${workspaceFolder:OZTS}; npm run watch",
+			"group": {
+				"kind": "build",
+			}
+		}, {
+			"label": "TStoJS_Watch_simple",
+			"type": "shell",
+			"dependsOn": ["TStoJS_Install"],
+			"command": "cd ${workspaceFolder:OZTS}; npm run watch-simple",
+			"group": {
+				"kind": "build",
+			}
+		}, {
+			"label": "Webpack_Install",
+			"type": "shell",
+			"command": "cd ${workspaceFolder:OZJSViewer}; npm run build_canvas -- --env output=${workspaceFolder}/../../dev_test/viewer",
+			"group": {
+				"kind": "build",
+			}
+		}, {
+			"label": "Webpack_Provide_JS",
+			"type": "shell",
+			"dependsOn": ["Webpack_Install", "TStoJS_Conv", "Groovy_CopyRes_DevTest"],
+			"command": "cd ${workspaceFolder:OZJSViewer}; npm run build_canvas -- --env output=${workspaceFolder}/../../dev_test/viewer",
+			"group": {
+				"kind": "build",
+			}
+		}, {
+			"label": "Webpack_Provide_JS_simple",
+			"type": "shell",
+			"dependsOn": ["Webpack_Install", "TStoJS_Conv_simple", "Groovy_CopyRes_DevTest"],
+			"command": "cd ${workspaceFolder:OZJSViewer}; npm run build_svg -- --env output=${workspaceFolder}/../../dev_test/viewer",
+			"group": {
+				"kind": "build",
+			}
+		}, {
+			"label": "Webpack_Watch_JS",
+			"type": "shell",
+			"dependsOn": ["Webpack_Install", "TStoJS_Conv", "Groovy_CopyRes_DevTest"],
+			"command": "cd ${workspaceFolder:OZJSViewer}; npm run build_canvas -- --env output=${workspaceFolder}/../../dev_test/viewer --watch --progress",
+			"group": {
+				"kind": "build",
+			}
+		}, {
+			"label": "Webpack_Watch_JS_simple)",
+			"type": "shell",
+			"dependsOn": ["Webpack_Install", "TStoJS_Conv_simple", "Groovy_CopyRes_DevTest"],
+			"command": "cd ${workspaceFolder:OZJSViewer}; npm run build_svg -- --env output=${workspaceFolder}/../../dev_test/viewer --watch --progress",
+			"group": {
+				"kind": "build",
+			}
+		}, {
+			"label": "Groovy_ACT",
+			"type": "shell",
+			"command": "cd ${workspaceFolder:ACT}; java -cp ../lib/* org.codehaus.groovy.tools.GroovyStarter --main groovy.ui.GroovyMain src/Main.groovy",
+			"group": {
+				"kind": "build",
+			}
+		}, {
+			"label": "Groovy_CopyRes_DevTest",
+			"type": "shell",
+			"command": "cd ${workspaceFolder:copy_res}; java -cp ../lib/* org.codehaus.groovy.tools.GroovyStarter --main groovy.ui.GroovyMain src/Main.groovy D:/OZSOURCE90 devTestRes",
+			"group": {
+				"kind": "build",
+			}
+		}, {
+			"label": "Run_Tomcat_DEVTEST",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/C",
+				"set TARGET_TOMCAT_HOME=${input:tomcatPath} && cd ${workspaceFolder}\\TomcatHome\\ && call start.bat"
+			],
+			"group": {
+				"kind": "build"
+			}
+		}
+	],
+	"inputs": [
+		{
+			"id": "tomcatPath",
+			"type": "promptString",
+			"description": "Tomcat 설치 경로를 입력하세요.",
+			"default": "D:\\Tomcats\\apache-tomcat-9.0.95"
+		}
+	]
+}
