@@ -1,10 +1,13 @@
 {
 	"folders": [
 		{
-			"path": "../OZSOURCE90/OZReportViewer/OZActiveX"
+			"path": "../../../OZSOURCE90/OZReportViewer/OZActiveX"
 		},
 		{
-			"path": "param"
+			"path": "../../param"
+		},
+		{
+			"path": "."
 		}
 	],
 	"settings": {
