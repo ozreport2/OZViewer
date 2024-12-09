@@ -89,7 +89,7 @@
 		}, {
 			"label": "Groovy_CopyRes_DevTest",
 			"type": "shell",
-			"command": "cd ${workspaceFolder:copy_res}; java -cp ../lib/* org.codehaus.groovy.tools.GroovyStarter --main groovy.ui.GroovyMain src/Main.groovy D:/OZSOURCE90 devTestRes",
+			"command": "cd ${workspaceFolder:copy_res}; java -cp ../lib/* org.codehaus.groovy.tools.GroovyStarter --main groovy.ui.GroovyMain src/Main.groovy D:/OZSOURCE devTestRes",
 			"group": {
 				"kind": "build",
 			}
