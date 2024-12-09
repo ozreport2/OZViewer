@@ -16,5 +16,7 @@
 			"path": "../../copy_res"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"task.autoDetect": "off"
+	}
 }
