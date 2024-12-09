@@ -1,10 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "../../../OZSOURCE90/OZReportViewer/OZTS"
+			"path": "/OZSOURCE90/OZReportViewer/OZTS"
 		},
 		{
-			"path": "../../../OZSOURCE90/OZReportViewer/OZJSViewer"
+			"path": "/OZSOURCE90/OZReportViewer/OZJSViewer"
 		},
 		{
 			"path": "."
