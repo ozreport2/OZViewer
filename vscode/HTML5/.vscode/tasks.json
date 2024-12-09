@@ -25,6 +25,22 @@
 				"kind": "build",
 			}
 		}, {
+			"label": "TStoJS_BuildConv",
+			"type": "shell",
+			"dependsOn": ["TStoJS_Install"],
+			"command": "cd ${workspaceFolder:OZTS}; npm run conv-build",
+			"group": {
+				"kind": "build",
+			}
+		}, {
+			"label": "TStoJS_BuildConv_simple",
+			"type": "shell",
+			"dependsOn": ["TStoJS_Install"],
+			"command": "cd ${workspaceFolder:OZTS}; npm run conv-simple-build",
+			"group": {
+				"kind": "build",
+			}
+		}, {
 			"label": "TStoJS_Watch",
 			"type": "shell",
 			"dependsOn": ["TStoJS_Install"],
@@ -37,6 +53,14 @@
 			"type": "shell",
 			"dependsOn": ["TStoJS_Install"],
 			"command": "cd ${workspaceFolder:OZTS}; npm run watch-simple",
+			"group": {
+				"kind": "build",
+			}
+		}, {
+			"label": "Webpack_Provide_DF",
+			"type": "shell",
+			"dependsOn": ["TStoJS_Install"],
+			"command": "cd ${workspaceFolder:OZTS}; npm run webpack-df -- --env mode=production output=${workspaceFolder}/../../dev_test/viewer/DialogueFlow outputmap= usesourcemap=true",
 			"group": {
 				"kind": "build",
 			}
@@ -72,7 +96,7 @@
 				"kind": "build",
 			}
 		}, {
-			"label": "Webpack_Watch_JS_simple)",
+			"label": "Webpack_Watch_JS_simple",
 			"type": "shell",
 			"dependsOn": ["Webpack_Install", "TStoJS_Conv_simple", "Groovy_CopyRes_DevTest"],
 			"command": "cd ${workspaceFolder:OZJSViewer}; npm run build_svg -- --env output=${workspaceFolder}/../../dev_test/viewer --watch --progress",
