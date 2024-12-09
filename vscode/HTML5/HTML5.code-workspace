@@ -1,19 +1,32 @@
 {
 	"folders": [
 		{
-			"path": "/OZSOURCE90/OZReportViewer/OZTS"
-		},
-		{
-			"path": "/OZSOURCE90/OZReportViewer/OZJSViewer"
-		},
-		{
+			"name": "HTML5",
 			"path": "."
 		},
 		{
+			"name": "OZTS",
+			"path": "/OZSOURCE90/OZReportViewer/OZTS"
+		},
+		{
+			"name": "OZJSViewer",
+			"path": "/OZSOURCE90/OZReportViewer/OZJSViewer"
+		},
+		{
+			"name": "ACT",
 			"path": "../../ACT"
 		},
 		{
+			"name": "copy_res",
 			"path": "../../copy_res"
+		},
+		{
+			"name": "param",
+			"path": "../../param"
+		},
+		{
+			"name": "dev_test",
+			"path": "../../dev_test"
 		}
 	],
 	"settings": {

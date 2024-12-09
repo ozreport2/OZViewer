@@ -60,14 +60,14 @@
 			"label": "Webpack_Provide_DF",
 			"type": "shell",
 			"dependsOn": ["TStoJS_Install"],
-			"command": "cd ${workspaceFolder:OZTS}; npm run webpack-df -- --env mode=production output=${workspaceFolder}/../../dev_test/viewer/DialogueFlow outputmap= usesourcemap=true",
+			"command": "cd ${workspaceFolder:OZTS}; npm run webpack-df -- --env mode=production output=${workspaceFolder:dev_test}/viewer/DialogueFlow outputmap= usesourcemap=true",
 			"group": {
 				"kind": "build",
 			}
 		}, {
 			"label": "Webpack_Install",
 			"type": "shell",
-			"command": "cd ${workspaceFolder:OZJSViewer}; npm run build_canvas -- --env output=${workspaceFolder}/../../dev_test/viewer",
+			"command": "cd ${workspaceFolder:OZJSViewer}; npm run build_canvas -- --env output=${workspaceFolder:dev_test}/viewer",
 			"group": {
 				"kind": "build",
 			}
@@ -75,7 +75,7 @@
 			"label": "Webpack_Provide_JS",
 			"type": "shell",
 			"dependsOn": ["Webpack_Install", "TStoJS_Conv", "Groovy_CopyRes_DevTest"],
-			"command": "cd ${workspaceFolder:OZJSViewer}; npm run build_canvas -- --env output=${workspaceFolder}/../../dev_test/viewer",
+			"command": "cd ${workspaceFolder:OZJSViewer}; npm run build_canvas -- --env output=${workspaceFolder:dev_test}/viewer",
 			"group": {
 				"kind": "build",
 			}
@@ -83,7 +83,7 @@
 			"label": "Webpack_Provide_JS_simple",
 			"type": "shell",
 			"dependsOn": ["Webpack_Install", "TStoJS_Conv_simple", "Groovy_CopyRes_DevTest"],
-			"command": "cd ${workspaceFolder:OZJSViewer}; npm run build_svg -- --env output=${workspaceFolder}/../../dev_test/viewer",
+			"command": "cd ${workspaceFolder:OZJSViewer}; npm run build_svg -- --env output=${workspaceFolder:dev_test}/viewer",
 			"group": {
 				"kind": "build",
 			}
@@ -91,7 +91,7 @@
 			"label": "Webpack_Watch_JS",
 			"type": "shell",
 			"dependsOn": ["Webpack_Install", "TStoJS_Conv", "Groovy_CopyRes_DevTest"],
-			"command": "cd ${workspaceFolder:OZJSViewer}; npm run build_canvas -- --env output=${workspaceFolder}/../../dev_test/viewer --watch --progress",
+			"command": "cd ${workspaceFolder:OZJSViewer}; npm run build_canvas -- --env output=${workspaceFolder:dev_test}/viewer --watch --progress",
 			"group": {
 				"kind": "build",
 			}
@@ -99,7 +99,7 @@
 			"label": "Webpack_Watch_JS_simple",
 			"type": "shell",
 			"dependsOn": ["Webpack_Install", "TStoJS_Conv_simple", "Groovy_CopyRes_DevTest"],
-			"command": "cd ${workspaceFolder:OZJSViewer}; npm run build_svg -- --env output=${workspaceFolder}/../../dev_test/viewer --watch --progress",
+			"command": "cd ${workspaceFolder:OZJSViewer}; npm run build_svg -- --env output=${workspaceFolder:dev_test}/viewer --watch --progress",
 			"group": {
 				"kind": "build",
 			}
