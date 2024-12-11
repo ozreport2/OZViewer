@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"name": "HTML5",
+			"path": "."
+		},
+		{
+			"name": "OZJSViewer",
+			"path": "/OZSOURCE80/OZReportViewer/OZJSViewer"
+		},
+		{
+			"name": "copy_res",
+			"path": "../../copy_res"
+		},
+		{
+			"name": "param",
+			"path": "../../param"
+		}
+	],
+	"settings": {}
+}

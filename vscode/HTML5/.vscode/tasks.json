@@ -1,0 +1,32 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Groovy_CopyRes_DevTest",
+			"type": "shell",
+			"command": "cd ${workspaceFolder:copy_res}; java -cp ../lib/* org.codehaus.groovy.tools.GroovyStarter --main groovy.ui.GroovyMain src/Main.groovy D:/OZSOURCE80 devTestRes",
+			"group": {
+				"kind": "build",
+			}
+		}, {
+			"label": "Run_Tomcat_DEVTEST",
+			"type": "shell",
+			"command": "cmd",
+			"args": [
+				"/C",
+				"set TARGET_TOMCAT_HOME=${input:tomcatPath} && cd ${workspaceFolder}\\TomcatHome\\ && call start.bat"
+			],
+			"group": {
+				"kind": "build"
+			}
+		}
+	],
+	"inputs": [
+		{
+			"id": "tomcatPath",
+			"type": "promptString",
+			"description": "Tomcat 설치 경로를 입력하세요.",
+			"default": "D:\\Tomcats\\apache-tomcat-9.0.95"
+		}
+	]
+}
