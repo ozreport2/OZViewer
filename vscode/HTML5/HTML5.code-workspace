@@ -27,9 +27,7 @@
 		{
 			"name": "dev_test",
 			"path": "../../dev_test"
-		}
+		},
 	],
-	"settings": {
-		"task.autoDetect": "off"
-	}
+	"settings": {}
 }
