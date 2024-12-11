@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug (ReleaseU)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder:OZActiveX}/bin32/ozcviewer.exe",
+            "args": ["/file", "${workspaceFolder:param}/${input:wsParamOz}"],
+            "cwd": "${workspaceFolder:OZActiveX}",
+            "preLaunchTask": "Build_EXE_ReleaseU",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "postDebugTask":  "Kill_EXE_ReleaseU"
+        }, {
+            "name": "Debug (DebugU)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder:OZActiveX}/bin32/ozcviewerd.exe",
+            "args": ["/file", "${workspaceFolder:param}/${input:wsParamOz}"],
+            "cwd": "${workspaceFolder:OZActiveX}",
+            "preLaunchTask": "Build_EXE_DebugU",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "postDebugTask": "Kill_EXE_DebugU"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "wsParamOz",
+            "type": "promptString",
+            "description": "워크스페이스 내 뷰어파라미터 파일 (.oz) 이름을 입력하세요",
+            "default": "param_frame.oz"
+        }
+    ]
+}
