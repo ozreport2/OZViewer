@@ -14,14 +14,16 @@
             "command": "cd ${workspaceFolder:OZActiveX}; \"C:/'Program Files (x86)'/'Microsoft Visual Studio 9.0'/Common7/IDE/devenv.com\" Viewer_2008.sln /build ReleaseU",
             "group": {
                 "kind": "build"
-            }
+            },
+            "problemMatcher": "$msCompile"
         }, {
             "label": "Build_EXE_DebugU",
             "type": "shell",
             "command": "cd ${workspaceFolder:OZActiveX}; \"C:/'Program Files (x86)'/'Microsoft Visual Studio 9.0'/Common7/IDE/devenv.com\" Viewer_2008.sln /build DebugU",
             "group": {
                 "kind": "build"
-            }
+            },
+            "problemMatcher": "$msCompile"
         }, {
             "label": "Run_EXE_ReleaseU",
             "type": "shell",
@@ -29,7 +31,7 @@
             "dependsOn": ["Build_EXE_ReleaseU"],
             "group": {
                 "kind": "build"
-            },
+            }
         }, {
             "label": "Run_EXE_DebugU",
             "type": "shell",
@@ -37,7 +39,17 @@
             "dependsOn": ["Build_EXE_DebugU"],
             "group": {
                 "kind": "build"
-            },
+            }
+        }, {
+            "label": "Kill_EXE_ReleaseU",
+            "type": "shell",
+            "command": "taskkill /IM ozcviewer.exe /F",
+            "problemMatcher": []
+        }, {
+            "label": "Kill_EXE_DebugU",
+            "type": "shell",
+            "command": "taskkill /IM ozcviewerd.exe /F",
+            "problemMatcher": []
         }
     ],
     "inputs": [
