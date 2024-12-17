@@ -4,7 +4,7 @@
             "name": "EXEViewer",
             "includePath": [
                 "${workspaceFolder:OZActiveX}/**",
-                "${workspaceFolder:OZActiveX}/../../Common_API/common_api/**",
+                "${workspaceFolder:common_api}/**",
                 "C:/Program Files (x86)/Microsoft Visual Studio 9.0/VC/include/",
                 "C:/Program Files (x86)/Microsoft Visual Studio 9.0/VC/atlmfc/include/",
                 "C:/Program Files/Microsoft SDKs/Windows/v6.0A/include/",
