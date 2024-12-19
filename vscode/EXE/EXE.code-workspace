@@ -16,7 +16,8 @@
 	"settings": {
 		"files.associations": {
 			"**/OZCRESOURCEKOREAN/Viewer.rc": "text-euckr",
-			"**/OZCRESOURCEJAPANESE/Viewer.rc": "text-shiftjis"
+			"**/OZCRESOURCEJAPANESE/Viewer.rc": "text-shiftjis",
+			"*.oz": "groovy"
 		},
 		"[cpp]": {
 			"files.encoding": "euckr"

@@ -19,6 +19,34 @@
 			"group": {
 				"kind": "build"
 			}
+		}, {
+			"label": "JSBuilder_BuildJava",
+			"type": "shell",
+			"command": "cd ${workspaceFolder:OZFlashToJSConverter}; Remove-Item -Path bin -Recurse -Force; New-Item -ItemType Directory -Path bin\n Get-ChildItem -Path src -Recurse -Filter *.java | ForEach-Object { $_.FullName } | Set-Content -Path source_paths.txt\n javac --% -d bin -cp lib/junit.jar -sourcepath \"src;src_lib\" -source 1.6 -target 1.6 @\"source_paths.txt\"\n Remove-Item -Path source_paths.txt"
+		}, {
+			"label": "JSBuilder_MakeJar",
+			"type": "shell",
+			"dependsOn": ["JSBuilder_BuildJava"],
+			"command": "cd ${workspaceFolder:OZFlashToJSConverter}; jar cvfm ozhtml5viewerConverter.jar ${workspaceFolder:HTML5}/manifest.txt -C bin . > $null",
+			"group": {
+				"kind": "build"
+			}
+		}, {
+			"label": "JSBuilder_AStoJS",
+			"type": "shell",
+			"dependsOn": ["JSBuilder_MakeJar"],
+			"command": "cd ${workspaceFolder:OZFlashToJSConverter}; java -cp ozhtml5viewerConverter.jar -Xmx1024m oz.build.OZAStoJSConverter",
+			"group": {
+				"kind": "build"
+			}
+		}, {
+			"label": "JSBuilder_AStoJS_Simple",
+			"type": "shell",
+			"dependsOn": ["JSBuilder_MakeJar"],
+			"command": "cd ${workspaceFolder:OZFlashToJSConverter}; java -cp ozhtml5viewerConverter.jar -Xmx1024m oz.build.OZAStoJSConverter_simple",
+			"group": {
+				"kind": "build"
+			}
 		}
 	],
 	"inputs": [

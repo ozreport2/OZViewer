@@ -9,6 +9,14 @@
 			"path": "/OZSOURCE80/OZReportViewer/OZJSViewer"
 		},
 		{
+			"name": "OZFlashToJSConverter",
+			"path": "/OZSOURCE80/OZReportViewer/OZFlashToJSConverter"
+		},
+		{
+			"name": "ACT",
+			"path": "../../ACT"
+		},
+		{
 			"name": "copy_res",
 			"path": "../../copy_res"
 		},
@@ -17,5 +25,15 @@
 			"path": "../../param"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"*.oz": "groovy"
+		},
+		"java.debug.settings.onBuildFailureProceed": true
+	},
+	"extensions": {
+		"recommendations": [
+			"vscjava.vscode-java-pack"
+		]
+	}
 }
