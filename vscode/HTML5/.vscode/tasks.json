@@ -131,76 +131,12 @@
 		}, {
 			"label": "JSBuilder_BuildJava",
 			"type": "shell",
-			"command": "{ cd ${workspaceFolder:OZFlashToJSConverter}\n Remove-Item -Path bin -Recurse -Force\n New-Item -ItemType Directory -Path bin\n Get-ChildItem -Path src -Recurse -Filter *.java | ForEach-Object { $_.FullName } | Set-Content -Path source_paths.txt\n javac --% -d bin -cp lib/junit.jar -sourcepath \"src;src_lib\" -source 1.6 -target 1.6 @\"source_paths.txt\"\n Remove-Item -Path source_paths.txt } | Out-Null",
+			"command": "cd ${workspaceFolder:OZFlashToJSConverter}; Remove-Item -Path bin -Recurse -Force; New-Item -ItemType Directory -Path bin\n Get-ChildItem -Path src -Recurse -Filter *.java | ForEach-Object { $_.FullName } | Set-Content -Path source_paths.txt\n javac --% -d bin -cp lib/junit.jar -sourcepath \"src;src_lib\" -source 1.6 -target 1.6 @\"source_paths.txt\"\n Remove-Item -Path source_paths.txt"
 		}, {
 			"label": "JSBuilder_MakeJar",
 			"type": "shell",
 			"dependsOn": ["JSBuilder_BuildJava"],
-			"command": "{ cd ${workspaceFolder:OZFlashToJSConverter}\n Set-Content -Path manifest.txt -Value @(\"Built-By: FORCS\", \"Version: 1.0\")\n jar cvfm ozhtml5viewerConverter.jar manifest.txt -C bin . > $null\n Remove-Item -Path manifest.txt -Force } | Out-Null",
-			"group": {
-				"kind": "build"
-			}
-		}, {
-			"label": "JSBuilder_JSViewer",
-			"type": "shell",
-			"dependsOn": ["JSBuilder_MakeJar"],
-			"command": "cd ${workspaceFolder:OZFlashToJSConverter}; java -cp ozhtml5viewerConverter.jar -Xmx512m oz.build.OZJSBuilder D:/OZSOURCE",
-			"group": {
-				"kind": "build"
-			}
-		}, {
-			"label": "JSBuilder_JSViewer_Release",
-			"type": "shell",
-			"dependsOn": ["JSBuilder_MakeJar"],
-			"command": "cd ${workspaceFolder:OZFlashToJSConverter}; java -cp ozhtml5viewerConverter.jar -Xmx512m oz.build.OZJSObfuscator D:/OZSOURCE",
-			"group": {
-				"kind": "build"
-			}
-		}, {
-			"label": "JSBuilder_JSSVGViewer",
-			"type": "shell",
-			"dependsOn": ["JSBuilder_MakeJar"],
-			"command": "cd ${workspaceFolder:OZFlashToJSConverter}; java -cp ozhtml5viewerConverter.jar -Xmx512m oz.build.OZJSBuilder_simple D:/OZSOURCE",
-			"group": {
-				"kind": "build"
-			}
-		}, {
-			"label": "JSBuilder_JSSVGViewer_Release",
-			"type": "shell",
-			"dependsOn": ["JSBuilder_MakeJar"],
-			"command": "cd ${workspaceFolder:OZFlashToJSConverter}; java -cp ozhtml5viewerConverter.jar -Xmx512m oz.build.OZJSObfuscator_simple D:/OZSOURCE",
-			"group": {
-				"kind": "build"
-			}
-		}, {
-			"label": "JSBuilder_SignLib",
-			"type": "shell",
-			"dependsOn": ["JSBuilder_MakeJar"],
-			"command": "cd ${workspaceFolder:OZFlashToJSConverter}; java -cp ozhtml5viewerConverter.jar -Xmx512m oz.build.OZJSBuilder_signlib D:/OZSOURCE",
-			"group": {
-				"kind": "build"
-			}
-		}, {
-			"label": "JSBuilder_SignLib_Release",
-			"type": "shell",
-			"dependsOn": ["JSBuilder_MakeJar"],
-			"command": "cd ${workspaceFolder:OZFlashToJSConverter}; java -cp ozhtml5viewerConverter.jar -Xmx512m oz.build.OZJSObfuscator_signlib D:/OZSOURCE",
-			"group": {
-				"kind": "build"
-			}
-		}, {
-			"label": "JSBuilder_Videosign",
-			"type": "shell",
-			"dependsOn": ["JSBuilder_MakeJar"],
-			"command": "cd ${workspaceFolder:OZFlashToJSConverter}; java -cp ozhtml5viewerConverter.jar -Xmx512m oz.build.OZJSBuilder_External OZVideoSign ${workspaceFolder:OZJSViewer}/OZVideoSign/src/ ${workspaceFolder:OZJSViewer}/bin/OZVideoSign.js",
-			"group": {
-				"kind": "build"
-			}
-		}, {
-			"label": "JSBuilder_Videosign_Release",
-			"type": "shell",
-			"dependsOn": ["JSBuilder_MakeJar"],
-			"command": "cd ${workspaceFolder:OZFlashToJSConverter}; java -cp ozhtml5viewerConverter.jar -Xmx512m oz.build.OZJSObfuscator_External OZVideoSign ${workspaceFolder:OZJSViewer}/OZVideoSign/src/ ${workspaceFolder:OZJSViewer}/OZVideoSign/obfuscated ${workspaceFolder:OZJSViewer}/OZVideoSign/release",
+			"command": "cd ${workspaceFolder:OZFlashToJSConverter}; jar cvfm ozhtml5viewerConverter.jar ${workspaceFolder:HTML5}/manifest.txt -C bin . > $null",
 			"group": {
 				"kind": "build"
 			}

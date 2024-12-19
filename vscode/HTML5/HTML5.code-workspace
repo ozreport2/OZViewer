@@ -37,5 +37,10 @@
 		"files.associations": {
 			"*.oz": "groovy"
 		}
+	},
+	"extensions": {
+		"recommendations": [
+			"vscjava.vscode-java-pack"
+		]
 	}
 }
