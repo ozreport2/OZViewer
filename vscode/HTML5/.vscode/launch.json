@@ -1,0 +1,127 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Build JSViewer",
+            "request": "launch",
+            "mainClass": "oz.build.OZJSBuilder",
+            "projectName": "",
+            "cwd": "${workspaceFolder:OZFlashToJSConverter}",
+            "console": "integratedTerminal",
+            "classPaths": [
+              "${workspaceFolder:OZFlashToJSConverter}/ozhtml5viewerConverter.jar"
+            ],
+            "vmArgs": "-Xmx512m",
+            "args": ["D:/OZSOURCE90"],
+            "preLaunchTask": "JSBuilder_MakeJar"
+        }, {
+            "type": "java",
+            "name": "Build JSViewer (Release)",
+            "request": "launch",
+            "mainClass": "oz.build.OZJSObfuscator",
+            "projectName": "",
+            "cwd": "${workspaceFolder:OZFlashToJSConverter}",
+            "console": "integratedTerminal",
+            "classPaths": [
+              "${workspaceFolder:OZFlashToJSConverter}/ozhtml5viewerConverter.jar"
+            ],
+            "vmArgs": "-Xmx512m",
+            "args": ["D:/OZSOURCE90"],
+            "preLaunchTask": "JSBuilder_MakeJar"
+        }, {
+            "type": "java",
+            "name": "Build JSSVGViewer",
+            "request": "launch",
+            "mainClass": "oz.build.OZJSBuilder_simple",
+            "projectName": "",
+            "cwd": "${workspaceFolder:OZFlashToJSConverter}",
+            "console": "integratedTerminal",
+            "classPaths": [
+              "${workspaceFolder:OZFlashToJSConverter}/ozhtml5viewerConverter.jar"
+            ],
+            "vmArgs": "-Xmx512m",
+            "args": ["D:/OZSOURCE90"],
+            "preLaunchTask": "JSBuilder_MakeJar"
+        }, {
+            "type": "java",
+            "name": "Build JSSVGViewer (Release)",
+            "request": "launch",
+            "mainClass": "oz.build.OZJSObfuscator_simple",
+            "projectName": "",
+            "cwd": "${workspaceFolder:OZFlashToJSConverter}",
+            "console": "integratedTerminal",
+            "classPaths": [
+              "${workspaceFolder:OZFlashToJSConverter}/ozhtml5viewerConverter.jar"
+            ],
+            "vmArgs": "-Xmx512m",
+            "args": ["D:/OZSOURCE90"],
+            "preLaunchTask": "JSBuilder_MakeJar"
+        }, {
+            "type": "java",
+            "name": "Build SignLib",
+            "request": "launch",
+            "mainClass": "oz.build.OZJSBuilder_signlib",
+            "projectName": "",
+            "cwd": "${workspaceFolder:OZFlashToJSConverter}",
+            "console": "integratedTerminal",
+            "classPaths": [
+              "${workspaceFolder:OZFlashToJSConverter}/ozhtml5viewerConverter.jar"
+            ],
+            "vmArgs": "-Xmx512m",
+            "args": ["D:/OZSOURCE90"],
+            "preLaunchTask": "JSBuilder_MakeJar"
+        }, {
+            "type": "java",
+            "name": "Build SignLib (Release)",
+            "request": "launch",
+            "mainClass": "oz.build.OZJSObfuscator_signlib",
+            "projectName": "",
+            "cwd": "${workspaceFolder:OZFlashToJSConverter}",
+            "console": "integratedTerminal",
+            "classPaths": [
+              "${workspaceFolder:OZFlashToJSConverter}/ozhtml5viewerConverter.jar"
+            ],
+            "vmArgs": "-Xmx512m",
+            "args": ["D:/OZSOURCE90"],
+            "preLaunchTask": "JSBuilder_MakeJar"
+        }, {
+            "type": "java",
+            "name": "Build VideoSign",
+            "request": "launch",
+            "mainClass": "oz.build.OZJSBuilder_External",
+            "projectName": "",
+            "cwd": "${workspaceFolder:OZFlashToJSConverter}",
+            "console": "integratedTerminal",
+            "classPaths": [
+              "${workspaceFolder:OZFlashToJSConverter}/ozhtml5viewerConverter.jar"
+            ],
+            "vmArgs": "-Xmx512m",
+            "args": [
+                "OZVideoSign",
+                "${workspaceFolder:OZJSViewer}/OZVideoSign/src/",
+                "${workspaceFolder:OZJSViewer}/bin/OZVideoSign.js"
+            ],
+            "preLaunchTask": "JSBuilder_MakeJar"
+        }, {
+            "type": "java",
+            "name": "Build VideoSign (Release)",
+            "request": "launch",
+            "mainClass": "oz.build.OZJSObfuscator_External",
+            "projectName": "",
+            "cwd": "${workspaceFolder:OZFlashToJSConverter}",
+            "console": "integratedTerminal",
+            "classPaths": [
+              "${workspaceFolder:OZFlashToJSConverter}/ozhtml5viewerConverter.jar"
+            ],
+            "vmArgs": "-Xmx512m",
+            "args": [
+                "OZVideoSign",
+                "${workspaceFolder:OZJSViewer}/OZVideoSign/src/",
+                "${workspaceFolder:OZJSViewer}/OZVideoSign/obfuscated",
+                "${workspaceFolder:OZJSViewer}/OZVideoSign/release"
+            ],
+            "preLaunchTask": "JSBuilder_MakeJar"
+        }
+    ]
+}
