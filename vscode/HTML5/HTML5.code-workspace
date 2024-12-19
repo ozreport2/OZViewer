@@ -13,6 +13,10 @@
 			"path": "/OZSOURCE/OZReportViewer/OZJSViewer"
 		},
 		{
+			"name": "OZFlashToJSConverter",
+			"path": "/OZSOURCE/OZReportViewer/OZFlashToJSConverter"
+		},
+		{
 			"name": "ACT",
 			"path": "../../ACT"
 		},
@@ -27,7 +31,11 @@
 		{
 			"name": "dev_test",
 			"path": "../../dev_test"
-		},
+		}
 	],
-	"settings": {}
+	"settings": {
+		"files.associations": {
+			"*.oz": "groovy"
+		}
+	}
 }
