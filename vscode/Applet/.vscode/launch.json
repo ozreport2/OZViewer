@@ -1,0 +1,66 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "ReportFrame",
+            "request": "launch",
+            "mainClass": "oz.main.OZReportFrame",
+            "projectName": "",
+            "cwd": "${workspaceFolder:OZAppletViewer}",
+            "console": "integratedTerminal",
+            "classPaths": [
+                "${workspaceFolder:OZAppletViewer}/build/activation.jar",
+                "${workspaceFolder:OZAppletViewer}/build/mail.jar",
+                "${workspaceFolder:OZAppletViewer}/build/jhall.jar",
+                "${workspaceFolder:OZAppletViewer}/build/netscape.jar",
+                "${workspaceFolder:OZAppletViewer}/build/uk.co.mmscomputing.imageio.tiff.jar",
+                "${workspaceFolder:OZAppletViewer}/../../lib/java/dom4j-1.6.1.jar",
+                "${workspaceFolder:OZAppletViewer}/../../lib/java/jaxen-1.1.6.jar",
+                "${workspaceFolder:OZAppletViewer}/../../lib/java/log4j.jar",
+                "${workspaceFolder:OZAppletViewer}/../../lib/java/ozc_js.jar",
+                "${workspaceFolder:OZAppletViewer}/../../lib/java/ozsfw90.jar",
+
+                "${workspaceFolder:Applet}/ozappletviewer.jar",
+                "${workspaceFolder:Applet}/lib/pdfbox-app-2.0.4.jar",
+            ],
+            "vmArgs": "-Xmx1024m",
+            "args": ["/file", "${workspaceFolder:param}/${input:wsParamOz}"],
+            "preLaunchTask": "Applet_MakeJar"
+        }, {
+            "type": "java",
+            "name": "ReportAPI",
+            "request": "launch",
+            "mainClass": "oz.api.OZReportAPI",
+            "projectName": "",
+            "cwd": "${workspaceFolder:OZAppletViewer}",
+            "console": "integratedTerminal",
+            "classPaths": [
+                "${workspaceFolder:OZAppletViewer}/build/activation.jar",
+                "${workspaceFolder:OZAppletViewer}/build/mail.jar",
+                "${workspaceFolder:OZAppletViewer}/build/jhall.jar",
+                "${workspaceFolder:OZAppletViewer}/build/netscape.jar",
+                "${workspaceFolder:OZAppletViewer}/build/uk.co.mmscomputing.imageio.tiff.jar",
+                "${workspaceFolder:OZAppletViewer}/../../lib/java/dom4j-1.6.1.jar",
+                "${workspaceFolder:OZAppletViewer}/../../lib/java/jaxen-1.1.6.jar",
+                "${workspaceFolder:OZAppletViewer}/../../lib/java/log4j.jar",
+                "${workspaceFolder:OZAppletViewer}/../../lib/java/ozc_js.jar",
+                "${workspaceFolder:OZAppletViewer}/../../lib/java/ozsfw90.jar",
+
+                "${workspaceFolder:Applet}/ozappletviewer.jar",
+                "${workspaceFolder:Applet}/lib/pdfbox-app-2.0.4.jar",
+            ],
+            "vmArgs": "-Xmx1024m",
+            "args": ["${workspaceFolder:param}/${input:wsParamOz}"],
+            "preLaunchTask": "Applet_MakeJar"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "wsParamOz",
+            "type": "promptString",
+            "description": "워크스페이스 내 뷰어파라미터 파일 (.oz) 이름을 입력하세요",
+            "default": "param_frame.oz"
+        }
+    ]
+}

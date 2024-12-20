@@ -1,0 +1,7 @@
+Built-By: FORCS
+Version: 1.0
+Main-class: oz.main.OZReportFrame
+Trusted-Library: true
+Permissions: all-permissions
+Codebase: *
+caller-Allowable-Codebase: *
