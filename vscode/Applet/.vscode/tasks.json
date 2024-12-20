@@ -1,0 +1,18 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+			"label": "Applet_BuildJava",
+			"type": "shell",
+			"command": "cd ${workspaceFolder:OZAppletViewer}; Remove-Item -Path bin -Recurse -Force; New-Item -ItemType Directory -Path bin\n Get-ChildItem -Path src -Recurse -Filter *.java | ForEach-Object { $_.FullName } | Set-Content -Path source_paths.txt\n javac --% -encoding UTF8 -d bin -cp build/activation.jar;build/mail.jar;build/jhall.jar;build/netscape.jar;build/uk.co.mmscomputing.imageio.tiff.jar;build/poi-3.0.2.jar;build/poi-scratchpad-3.0.2.jar;../../lib/java/dom4j-1.6.1.jar;../../lib/java/jaxen-1.1.6.jar;../../lib/java/log4j.jar;../../lib/java/ozc_js.jar;../../lib/java/ozsfw80.jar -sourcepath \"src;src_lib\" -source 1.8 -target 1.8 @\"source_paths.txt\"\n Remove-Item -Path source_paths.txt; Copy-Item -Path src/resource/image -Destination bin/resource -Recurse -Force"
+		}, {
+			"label": "Applet_MakeJar",
+			"type": "shell",
+			"dependsOn": ["Applet_BuildJava"],
+			"command": "cd ${workspaceFolder:OZAppletViewer}; jar cvfm ${workspaceFolder:Applet}/ozappletviewer.jar ${workspaceFolder:Applet}/manifest.txt -C bin . > $null",
+			"group": {
+				"kind": "build"
+			}
+		}
+    ],
+}

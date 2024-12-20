@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"name": "Applet",
+			"path": "."
+		},
+		{
+			"name": "OZAppletViewer",
+			"path": "/OZSOURCE80/OZReportViewer/OZAppletViewer"
+		},
+		{
+			"path": "../../param"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.oz": "groovy"
+		},
+		"java.debug.settings.onBuildFailureProceed": true,
+	},
+	"extensions": {
+		"recommendations": [
+			"vscjava.vscode-java-pack"
+		]
+	}
+}
