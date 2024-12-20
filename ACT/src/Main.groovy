@@ -47,7 +47,8 @@ static void main(String[] args) {
   ]
 
   def process = command.execute()
-  process.waitFor()
+  process.consumeProcessOutput(System.out, System.err) // stdout, stderr 연결
+  process.waitFor() // 프로세스 종료 대기
 
   println "opening the export directory in explorer (${exportPath}) ..."
   try {
