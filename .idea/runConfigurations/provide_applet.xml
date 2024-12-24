@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="provide_applet" type="AntRunConfiguration">
-    <antsettings antfile="file://$OZSOURCE$/OZReportViewer/OZAppletViewer/build_release_debug.xml" target="provide_applet_for_debug" />
+    <antsettings antfile="file://$OZSOURCE$/OZReportViewer/OZAppletViewer/build_debug.xml" target="provide_applet_for_debug" />
     <method v="2">
       <option name="Make" enabled="true" />
     </method>
