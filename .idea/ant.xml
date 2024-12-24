@@ -11,5 +11,11 @@
         <property name="java_target" value="8" />
       </properties>
     </buildFile>
+    <buildFile url="file://$OZSOURCE90$/OZReportViewer/OZAppletViewer/build_debug.xml">
+      <properties>
+        <property name="javac_path" value="$JDKPath$\bin\javac" />
+        <property name="copy_dir" value="$ProjectFileDir$\dev_test\server\WEB-INF\lib" />
+      </properties>
+    </buildFile>
   </component>
 </project>
