@@ -1,7 +1,5 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="run_scheduler" type="Application" factoryName="Application">
-    <option name="ALTERNATIVE_JRE_PATH" value="BUNDLED" />
-    <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
     <option name="MAIN_CLASS_NAME" value="oz.scheduler.main.OZScheduler" />
     <module name="scheduler" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dev_test/scheduler/bin" />
