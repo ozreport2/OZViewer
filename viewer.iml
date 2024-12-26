@@ -3,9 +3,13 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/dev_test" />
       <excludeFolder url="file://$MODULE_DIR$/lib" />
       <excludeFolder url="file://$MODULE_DIR$/svg" />
+      <excludeFolder url="file://$MODULE_DIR$/dev_test/oz" />
+      <excludeFolder url="file://$MODULE_DIR$/dev_test/scheduler/lib" />
+      <excludeFolder url="file://$MODULE_DIR$/dev_test/server" />
+      <excludeFolder url="file://$MODULE_DIR$/dev_test/viewer" />
+      <excludeFolder url="file://$MODULE_DIR$/dev_test/viewers" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
