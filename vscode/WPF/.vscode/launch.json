@@ -1,0 +1,36 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug (Release)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder:OZNET}/bin/Release/OZWPFViewer.exe",
+            "args": ["/file", "${workspaceFolder:param}/${input:wsParamOz}"],
+            "cwd": "${workspaceFolder:OZNET}",
+            "preLaunchTask": "Build_WPF_Release",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "postDebugTask":  "Kill_WPF"
+        }, {
+            "name": "Debug (Debug)",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder:OZNET}/bin/Debug/OZWPFViewer.exe",
+            "args": ["/file", "${workspaceFolder:param}/${input:wsParamOz}"],
+            "cwd": "${workspaceFolder:OZNET}",
+            "preLaunchTask": "Build_WPF_Debug",
+            "stopAtEntry": false,
+            "console": "internalConsole",
+            "postDebugTask": "Kill_WPF",
+        }
+    ],
+    "inputs": [
+        {
+            "id": "wsParamOz",
+            "type": "promptString",
+            "description": "워크스페이스 내 뷰어파라미터 파일 (.oz) 이름을 입력하세요",
+            "default": "param_frame.oz"
+        }
+    ]
+}

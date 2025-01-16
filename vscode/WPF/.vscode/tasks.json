@@ -1,0 +1,65 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Clean_WPF",
+            "type": "shell",
+            "command": "cd ${workspaceFolder:OZNET}; & \"$env:windir/Microsoft.NET/Framework/v4.0.30319/MSBuild\" Viewer_WPF.sln /nologo /t:Clean /property:Configuration=${input:wsRunConfig}",
+            "group": {
+                "kind": "build"
+            }
+        }, {
+            "label": "Build_WPF_Release",
+            "type": "shell",
+            "command": "cd ${workspaceFolder:OZNET}; & \"$env:windir/Microsoft.NET/Framework/v4.0.30319/MSBuild\" Viewer_WPF.sln /nologo /property:Configuration=Release",
+            "group": {
+                "kind": "build"
+            },
+            "problemMatcher": "$msCompile"
+        }, {
+            "label": "Build_WPF_Debug",
+            "type": "shell",
+            "command": "cd ${workspaceFolder:OZNET}; & \"$env:windir/Microsoft.NET/Framework/v4.0.30319/MSBuild\" Viewer_WPF.sln /nologo /property:Configuration=Debug",
+            "group": {
+                "kind": "build"
+            },
+            "problemMatcher": "$msCompile"
+        }, {
+            "label": "Run_WPF_Release",
+            "type": "shell",
+            "command": "${workspaceFolder:OZNET}/bin/Release/OZWPFViewer.exe /file ${workspaceFolder:param}/${input:wsParamOz}",
+            "dependsOn": ["Build_WPF_Release"],
+            "group": {
+                "kind": "build"
+            }
+        }, {
+            "label": "Run_WPF_Debug",
+            "type": "shell",
+            "command": "${workspaceFolder:OZNET}/bin/Debug/OZWPFViewer.exe /file ${workspaceFolder:param}/${input:wsParamOz}",
+            "dependsOn": ["Build_WPF_Debug"],
+            "group": {
+                "kind": "build"
+            }
+        }, {
+            "label": "Kill_WPF",
+            "type": "shell",
+            "command": "taskkill /IM OZWPFViewer.exe /F",
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "wsRunConfig",
+            "type": "pickString",
+            "description": "프로젝트 구성을 선택하세요.",
+            "options": ["Release", "Debug"],
+            "default": "Release"
+        }, {
+            "id": "wsParamOz",
+            "type": "promptString",
+            "description": "워크스페이스 내 뷰어파라미터 파일 (.oz) 이름을 입력하세요",
+            "default": "param_frame.oz"
+        }
+    ]
+}
+

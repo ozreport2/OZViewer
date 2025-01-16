@@ -1,0 +1,65 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "/OZSOURCE70/OZReportViewer/OZNET"
+		},
+		{
+			"path": "../../param"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.oz": "groovy"
+		},
+		"files.exclude": {
+			"**/bin": true,
+			"**/license": true,
+			"**/obj": true,
+			"**/Debug": true,
+			"**/Release": true,
+			"**/*.aps": true,
+			"**/*.clw": true,
+			"**/*.ncb": true,
+			"**/*.suo": true,
+			"**/*.vcproj": true,
+			"**/*.vcxproj": true,
+			"**/*.vcxproj.filters": true,
+			"**/*.bat": true,
+			"**/*.dll": true,
+			"**/*.exe": true,
+			"**/*.natvis": true,
+		},
+		"search.exclude": {
+			"**/bin": true,
+			"**/license": true,
+			"**/obj": true,
+			"**/Debug": true,
+			"**/Release": true,
+			"**/*.aps": true,
+			"**/*.clw": true,
+			"**/*.ncb": true,
+			"**/*.suo": true,
+			"**/*.vcproj": true,
+			"**/*.vcxproj": true,
+			"**/*.vcxproj.filters": true,
+			"**/*.bat": true,
+			"**/*.dll": true,
+			"**/*.exe": true,
+			"**/*.natvis": true,
+		},
+		"dotnet.preferCSharpExtension": true,
+		"dotnet.defaultSolution": "OZNET/Viewer_WPF.sln"
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-dotnettools.csharp",
+			"ms-dotnettools.vscode-dotnet-runtime"
+		]
+	},
+	"extensions.disabled": [
+      	"ms-vscode.cpptools",
+    ],
+}
