@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AntConfiguration">
-    <buildFile url="file://$OZSOURCE80$/OZReportViewer/OZFlashToJSConverter/build_release.xml">
+    <buildFile url="file://$OZSOURCE70$/OZReportViewer/OZFlashToJSConverter/build_release.xml">
       <properties>
         <property name="java_target" value="8" />
       </properties>

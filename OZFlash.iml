@@ -24,10 +24,10 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$OZSOURCE80$/OZReportViewer/OZFlash">
-      <sourceFolder url="file://$OZSOURCE80$/OZReportViewer/OZFlash/OZFlash" isTestSource="false" />
-      <excludeFolder url="file://$OZSOURCE80$/OZReportViewer/OZFlash/OZFlash/bin" />
-      <excludeFolder url="file://$OZSOURCE80$/OZReportViewer/OZFlash/OZFlash/build" />
+    <content url="file://$OZSOURCE70$/OZReportViewer/OZFlash">
+      <sourceFolder url="file://$OZSOURCE70$/OZReportViewer/OZFlash/OZFlash" isTestSource="false" />
+      <excludeFolder url="file://$OZSOURCE70$/OZReportViewer/OZFlash/OZFlash/bin" />
+      <excludeFolder url="file://$OZSOURCE70$/OZReportViewer/OZFlash/OZFlash/build" />
     </content>
     <orderEntry type="jdk" jdkName="3.2.0" jdkType="Flex SDK Type (new)" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -36,7 +36,7 @@
       <library type="flex">
         <properties id="636bef3f-208d-49d6-993b-06a50891a859" />
         <CLASSES>
-          <root url="jar://$OZSOURCE80$/OZReportViewer/OZFlash/OZFlash/bin/WindowsClassic.swc!/" />
+          <root url="jar://$OZSOURCE70$/OZReportViewer/OZFlash/OZFlash/bin/WindowsClassic.swc!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -46,7 +46,7 @@
       <library type="flex">
         <properties id="1672d166-faff-4731-8775-2561265ca6f3" />
         <CLASSES>
-          <root url="jar://$OZSOURCE80$/OZReportViewer/OZFlash/OZFlash/bin/xpath-as3-1.0.1.swc!/" />
+          <root url="jar://$OZSOURCE70$/OZReportViewer/OZFlash/OZFlash/bin/xpath-as3-1.0.1.swc!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
