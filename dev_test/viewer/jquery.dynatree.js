@@ -213,11 +213,11 @@ DynaTreeNode.prototype = {
 		if ( typeof data === "string" ){
 			data = { title: data };
 		}
-//      if( !data.key ){
-		if( data.key == null ){ // test for null OR undefined (issue 420)
-			data.key = "_" + tree._nodeCount++;
+//      if( !data.strKey ){
+		if( data.strKey == null ){ // test for null OR undefined (issue 420)
+			data.strKey = "_" + tree._nodeCount++;
 		}else{
-			data.key = "" + data.key; // issue 371
+			data.strKey = "" + data.strKey; // issue 371
 		}
 		this.data = $.extend({}, $.ui.dynatree.nodedatadefaults, data);
 		this.li = null; // not yet created
@@ -232,7 +232,7 @@ DynaTreeNode.prototype = {
 	},
 
 	toString: function() {
-		return "DynaTreeNode<" + this.data.key + ">: '" + this.data.title + "'";
+		return "DynaTreeNode<" + this.data.strKey + ">: '" + this.data.title + "'";
 	},
 
 	toDict: function(recursive, callback) {
@@ -396,8 +396,8 @@ DynaTreeNode.prototype = {
 				firstTime = true;
 				this.li = document.createElement("li");
 				this.li.dtnode = this;
-				if( data.key && opts.generateIds ){
-					this.li.id = opts.idPrefix + data.key;
+				if( data.strKey && opts.generateIds ){
+					this.li.id = opts.idPrefix + data.strKey;
 				}
 				this.span = document.createElement("span");
 				this.span.className = cn.title;
@@ -505,7 +505,7 @@ DynaTreeNode.prototype = {
 
 		this.visitParents(function(node){
 			if(node.parent){
-				path.unshift(node.data.key);
+				path.unshift(node.data.strKey);
 			}
 		}, !excludeSelf);
 		return sep + path.join(sep);
@@ -665,12 +665,12 @@ DynaTreeNode.prototype = {
 			}
 		} else if ( firstChild ) {
 			data.isStatusNode = true;
-			data.key = "_statusNode";
+			data.strKey = "_statusNode";
 			firstChild.data = data;
 			firstChild.render();
 		} else {
 			data.isStatusNode = true;
-			data.key = "_statusNode";
+			data.strKey = "_statusNode";
 			firstChild = this.addChild(data);
 		}
 	},
@@ -859,9 +859,9 @@ DynaTreeNode.prototype = {
 			}
 			this.tree.activeNode = this;
 			if( opts.persist ){
-				$.cookie(opts.cookieId + "-active", this.data.key, opts.cookie);
+				$.cookie(opts.cookieId + "-active", this.data.strKey, opts.cookie);
 			}
-			this.tree.persistence.activeKey = this.data.key;
+			this.tree.persistence.activeKey = this.data.strKey;
 			$(this.span).addClass(opts.classNames.active);
 			if ( fireEvents && opts.onActivate ){
 				opts.onActivate.call(this.tree, this);
@@ -1074,7 +1074,7 @@ DynaTreeNode.prototype = {
 
 		if( sel ) {
 			if( opts.persist ){
-				this.tree.persistence.addSelect(this.data.key);
+				this.tree.persistence.addSelect(this.data.strKey);
 			}
 			$(this.span).addClass(opts.classNames.selected);
 
@@ -1086,7 +1086,7 @@ DynaTreeNode.prototype = {
 			}
 		} else {
 			if( opts.persist ){
-				this.tree.persistence.clearSelect(this.data.key);
+				this.tree.persistence.clearSelect(this.data.strKey);
 			}
 			$(this.span).removeClass(opts.classNames.selected);
 
@@ -1158,9 +1158,9 @@ DynaTreeNode.prototype = {
 		// Persist expand state
 		if( opts.persist ) {
 			if( bExpand ){
-				this.tree.persistence.addExpand(this.data.key);
+				this.tree.persistence.addExpand(this.data.strKey);
 			}else{
-				this.tree.persistence.clearExpand(this.data.key);
+				this.tree.persistence.clearExpand(this.data.strKey);
 			}
 		}
 		// Do not apply animations in init phase, or before lazy-loading
@@ -1409,7 +1409,7 @@ DynaTreeNode.prototype = {
 			}
 			$(this.tree.tnFocused.span).addClass(opts.classNames.focused);
 			if( opts.persist ){
-				$.cookie(opts.cookieId + "-focus", this.data.key, opts.cookie);
+				$.cookie(opts.cookieId + "-focus", this.data.strKey, opts.cookie);
 			}
 		}
 		// TODO: return anything?
@@ -1474,10 +1474,10 @@ DynaTreeNode.prototype = {
 		}
 		if( this.tree.options.persist ) {
 			if( tn.bSelected ){
-				this.tree.persistence.clearSelect(tn.data.key);
+				this.tree.persistence.clearSelect(tn.data.strKey);
 			}
 			if ( tn.bExpanded ){
-				this.tree.persistence.clearExpand(tn.data.key);
+				this.tree.persistence.clearExpand(tn.data.strKey);
 			}
 		}
 		tn.removeChildren(true);
@@ -1507,10 +1507,10 @@ DynaTreeNode.prototype = {
 				}
 				if( this.tree.options.persist && !retainPersistence ) {
 					if( tn.bSelected ){
-						this.tree.persistence.clearSelect(tn.data.key);
+						this.tree.persistence.clearSelect(tn.data.strKey);
 					}
 					if ( tn.bExpanded ){
-						this.tree.persistence.clearExpand(tn.data.key);
+						this.tree.persistence.clearExpand(tn.data.strKey);
 					}
 				}
 				tn.removeChildren(true, retainPersistence);
@@ -1552,7 +1552,7 @@ DynaTreeNode.prototype = {
 		if(callback){
 			var self = this;
 			var eventType = "nodeLoaded.dynatree." + this.tree.$tree.attr("id")
-				+ "." + this.data.key;
+				+ "." + this.data.strKey;
 			this.tree.$tree.bind(eventType, function(e, node, isOk){
 				self.tree.$tree.unbind(eventType);
 				self.tree.logDebug("loaded %o, %o, %o", e, node, isOk);
@@ -1595,7 +1595,7 @@ DynaTreeNode.prototype = {
 		if(this.childList){
 			for(var i=0, l=this.childList.length; i < l; i++){
 				var child = this.childList[i];
-				if( child.data.key === seg ){
+				if( child.data.strKey === seg ){
 					if(segList.length === 0) {
 						// Found the end node
 						callback.call(tree, child, "ok");
@@ -1688,34 +1688,34 @@ DynaTreeNode.prototype = {
 		var isInitializing = tree.isInitializing();
 		if( opts.persist && pers.cookiesFound && isInitializing ) {
 			// Init status from cookies
-//          tree.logDebug("init from cookie, pa=%o, dk=%o", pers.activeKey, dtnode.data.key);
-			if( pers.activeKey === dtnode.data.key ){
+//          tree.logDebug("init from cookie, pa=%o, dk=%o", pers.activeKey, dtnode.data.strKey);
+			if( pers.activeKey === dtnode.data.strKey ){
 				tree.activeNode = dtnode;
 			}
-			if( pers.focusedKey === dtnode.data.key ){
+			if( pers.focusedKey === dtnode.data.strKey ){
 				tree.focusNode = dtnode;
 			}
-			dtnode.bExpanded = ($.inArray(dtnode.data.key, pers.expandedKeyList) >= 0);
-			dtnode.bSelected = ($.inArray(dtnode.data.key, pers.selectedKeyList) >= 0);
-//          tree.logDebug("    key=%o, bSelected=%o", dtnode.data.key, dtnode.bSelected);
+			dtnode.bExpanded = ($.inArray(dtnode.data.strKey, pers.expandedKeyList) >= 0);
+			dtnode.bSelected = ($.inArray(dtnode.data.strKey, pers.selectedKeyList) >= 0);
+//          tree.logDebug("    key=%o, bSelected=%o", dtnode.data.strKey, dtnode.bSelected);
 		} else {
 			// Init status from data (Note: we write the cookies after the init phase)
 //          tree.logDebug("init from data");
 			if( dtnode.data.activate ) {
 				tree.activeNode = dtnode;
 				if( opts.persist ){
-					pers.activeKey = dtnode.data.key;
+					pers.activeKey = dtnode.data.strKey;
 				}
 			}
 			if( dtnode.data.focus ) {
 				tree.focusNode = dtnode;
 				if( opts.persist ){
-					pers.focusedKey = dtnode.data.key;
+					pers.focusedKey = dtnode.data.strKey;
 				}
 			}
 			dtnode.bExpanded = ( dtnode.data.expand === true ); // Collapsed by default
 			if( dtnode.bExpanded && opts.persist ){
-				pers.addExpand(dtnode.data.key);
+				pers.addExpand(dtnode.data.strKey);
 			}
 			dtnode.bSelected = ( dtnode.data.select === true ); // Deselected by default
 /*
@@ -1727,7 +1727,7 @@ DynaTreeNode.prototype = {
 			}
 */
 			if( dtnode.bSelected && opts.persist ){
-				pers.addSelect(dtnode.data.key);
+				pers.addSelect(dtnode.data.strKey);
 			}
 		}
 
@@ -1833,7 +1833,7 @@ DynaTreeNode.prototype = {
 		// Ajax option inheritance: $.ajaxSetup < $.ui.dynatree.prototype.options.ajaxDefaults < tree.options.ajaxDefaults < ajaxOptions
 		var orgSuccess = ajaxOptions.success,
 			orgError = ajaxOptions.error,
-			eventType = "nodeLoaded.dynatree." + this.tree.$tree.attr("id") + "." + this.data.key;
+			eventType = "nodeLoaded.dynatree." + this.tree.$tree.attr("id") + "." + this.data.strKey;
 		var options = $.extend({}, this.tree.options.ajaxDefaults, ajaxOptions, {
 			success: function(data, textStatus, jqXHR){
 				// <this> is the request options
@@ -2329,7 +2329,7 @@ DynaTree.prototype = {
 		var pers = this.persistence;
 		var ajaxOpts = $.extend({}, opts.initAjax);
 		// Append cookie info to the request
-//      this.logDebug("reloadAjax: key=%o, an.key:%o", pers.activeKey, this.activeNode?this.activeNode.data.key:"?");
+//      this.logDebug("reloadAjax: key=%o, an.strKey:%o", pers.activeKey, this.activeNode?this.activeNode.data.strKey:"?");
 		if( ajaxOpts.addActiveKey ){
 			ajaxOpts.data.activeKey = pers.activeKey;
 		}
@@ -2390,7 +2390,7 @@ DynaTree.prototype = {
 			name = this.$tree.attr("name") || this.$tree.attr("id"),
 			arr = [];
 		for(var i=0, l=nodeList.length; i<l; i++){
-			arr.push({name: name, value: nodeList[i].data.key});
+			arr.push({name: name, value: nodeList[i].data.strKey});
 		}
 		return arr;
 	},
@@ -2463,7 +2463,7 @@ DynaTree.prototype = {
 		var match = null;
 		this.visit(function(node){
 //          window.console.log("%s", node);
-			if(node.data.key === key) {
+			if(node.data.strKey === key) {
 				match = node;
 				return false;
 			}
@@ -2522,7 +2522,7 @@ DynaTree.prototype = {
 			segList.shift();
 		}
 		// Remove leading system root key
-		if(segList[0] == this.tnRoot.data.key){
+		if(segList[0] == this.tnRoot.data.strKey){
 			this.logDebug("Removed leading root key.");
 			segList.shift();
 		}
@@ -2614,7 +2614,7 @@ TODO: better?
 				data.tooltip = $li.attr("title"); // overrides <a title='...'>
 			}
 			if( $li.attr("id") ){
-				data.key = "" + $li.attr("id");
+				data.strKey = "" + $li.attr("id");
 			}
 			// If a data attribute is present, evaluate as a JavaScript object
 			if( $li.attr("data") ) {
@@ -3272,7 +3272,7 @@ if(versionCompare($.ui.version, "1.8") < 0){
  */
 $.ui.dynatree.nodedatadefaults = {
 	title: null, // (required) Displayed name of the node (html is allowed here)
-	key: null, // May be used with activate(), select(), find(), ...
+	strKey: null, // May be used with activate(), select(), find(), ...
 	isFolder: false, // Use a folder icon. Also the node is expandable but not selectable.
 	isLazy: false, // Call onLazyRead(), when the node is expanded for the first time to allow for delayed creation of children.
 	tooltip: null, // Show this popup text.
