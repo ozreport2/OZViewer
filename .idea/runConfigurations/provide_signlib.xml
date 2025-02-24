@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="provide_signlib" type="js.build_tools.npm">
+    <package-json value="$OZSOURCE90$/OZReportViewer/OZTS/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="webpack-signlib" />
+    </scripts>
+    <arguments value="-- --env mode=production output=$PROJECT_DIR$/dev_test/viewer outputmap= usesourcemap=true" />
+    <node-interpreter value="project" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>
